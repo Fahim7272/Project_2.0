@@ -11,64 +11,132 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
-   <left>
-      <AnchorPane prefHeight="506.0" prefWidth="340.0" style="-fx-background-color: #7ed6df;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="123.0" fitWidth="161.0" layoutX="108.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@hat.png" />
-               </image>
-            </ImageView>
-            <Text fill="#535c68" layoutX="145.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edu-Wit" wrappingWidth="233.33669662475586">
-               <font>
-                  <Font size="22.0" />
-               </font>
-            </Text>
-         </children></AnchorPane>
-   </left>
-   <center>
-      <AnchorPane prefHeight="448.0" prefWidth="510.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="exit" layoutX="354.0" layoutY="15.0" mnemonicParsing="false" onAction="#exit" prefHeight="20.0" prefWidth="18.0" style="-fx-background-color: #FFFFFF;" text="Button" textFill="WHITE">
-               <graphic>
-                  <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
+   <children>
+      <BorderPane fx:id="login_student" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0">
+         <left>
+            <AnchorPane prefHeight="506.0" prefWidth="340.0" style="-fx-background-color: #7ed6df;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="123.0" fitWidth="161.0" layoutX="108.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@exit.png" />
+                        <Image url="@hat.png" />
                      </image>
                   </ImageView>
-               </graphic></Button>
-            <TextField fx:id="ID" layoutX="133.0" layoutY="208.0" prefHeight="26.0" prefWidth="170.0" promptText="ID" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
-            <PasswordField fx:id="password" layoutX="132.0" layoutY="265.0" prefHeight="26.0" prefWidth="170.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
-
-            <Button fx:id="login_button" layoutX="188.0" layoutY="326.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #7ed6df;" text="Login" textFill="#000000b0" />
-
-            <Text fill="#7ed6df" layoutX="144.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT LOGIN">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="95.0" fitWidth="110.0" layoutX="156.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@users.PNG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="90.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@user.PNG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="89.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@key.PNG" />
-               </image>
-            </ImageView>
-            <Hyperlink layoutX="172.0" layoutY="465.0" onAction="#admin_login" text="Admin Login" textFill="#28747b">
-               <font>
-                  <Font size="12.5" />
-               </font>
-            </Hyperlink>
-         </children>
-      </AnchorPane>
-   </center>
-</BorderPane>
+                  <Text fill="#535c68" layoutX="145.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edu-Wit" wrappingWidth="233.33669662475586">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="518.0" prefWidth="401.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="exit" layoutX="354.0" layoutY="15.0" mnemonicParsing="false" onAction="#exit" prefHeight="20.0" prefWidth="18.0" style="-fx-background-color: #FFFFFF;" text="Button" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@exit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="ID" layoutX="133.0" layoutY="208.0" prefHeight="26.0" prefWidth="170.0" promptText="ID" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
+                  <PasswordField fx:id="password" layoutX="132.0" layoutY="265.0" prefHeight="26.0" prefWidth="170.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
+      
+                  <Button fx:id="login_button" layoutX="188.0" layoutY="326.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #7ed6df;" text="Login" textFill="#000000b0" />
+      
+                  <Text fill="#7ed6df" layoutX="144.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT LOGIN">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="95.0" fitWidth="110.0" layoutX="156.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@users.PNG" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="90.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.PNG" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="89.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@key.PNG" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="admin_login" layoutX="172.0" layoutY="465.0" onAction="#changeScene" text="Admin Login" textFill="#28747b">
+                     <font>
+                        <Font size="12.5" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+      <BorderPane fx:id="login_admin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0" visible="false">
+         <center>
+            <AnchorPane prefHeight="506.0" prefWidth="364.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="exit1" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#exit1" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: #FFFFFF;" text="Button" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@exit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="ID1" layoutX="118.0" layoutY="209.0" prefHeight="26.0" prefWidth="170.0" promptText="ID" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
+                  <PasswordField fx:id="password1" layoutX="117.0" layoutY="266.0" prefHeight="26.0" prefWidth="170.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Button fx:id="login_button1" layoutX="173.0" layoutY="325.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #7ed6df;" text="Login" textFill="#000000b0" />
+                  <Text fill="#7ed6df" layoutX="135.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN LOGIN">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="95.0" fitWidth="99.0" layoutX="154.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.PNG" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="75.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.PNG" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="74.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@key.PNG" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="student_login" layoutX="152.0" layoutY="465.0" onAction="#changeScene" text="Student Login" textFill="#28747b">
+                     <font>
+                        <Font size="12.5" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+         </center>
+         <right>
+            <AnchorPane prefHeight="506.0" prefWidth="312.0" style="-fx-background-color: #7ed6df;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="123.0" fitWidth="161.0" layoutX="108.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@hat.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#535c68" layoutX="145.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edu-Wit" wrappingWidth="233.33669662475586">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
