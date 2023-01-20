@@ -1,18 +1,22 @@
 package com.example.demo1;
 
-import com.sun.jdi.connect.spi.Connection;
+//import com.sun.jdi.connect.spi.Connection;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ResourceBundle;
 
 public class HelloController {
 
@@ -27,7 +31,7 @@ public class HelloController {
 
         private Connection connect;
         private Statement statement;
-        private PreparedStatement preparedStatement;
+        private PreparedStatement pre;
         private ResultSet resultSet;
 
 
@@ -37,9 +41,40 @@ public class HelloController {
         }
 
         public void login(){
-                connect = DB.connectDb();
 
-                String sql;
+                connect = DB.connectDb();
+                String sql =" ";
+
+                try{
+                        pre = connect.prepareStatement(sql);
+                        pre.setString(1, ID.getText());
+                        pre.setString(2, password.getText());
+
+                        resultSet = pre.executeQuery();
+
+                        if(resultSet.next()){
+
+                                Parent root = FXMLLoader.load(getClass().getResource("login1.fxml"));
+
+                                Scene scene = new Scene(root);
+                                Stage stage = new Stage();
+                                stage.initStyle(StageStyle.DECORATED.UNDECORATED);
+                                //stage.setTitle("Hello!");
+                                stage.setScene(scene);
+                                stage.show();
+
+                        }
+                        else{
+                                Alert alert = new Alert(Alert.AlertType.ERROR);
+                                alert.setTitle("Error");
+                                alert.setHeaderText(null);
+                                alert.setContentText("Wrong Username or Password");
+                                alert.showAndWait();
+                        }
+
+                }catch(Exception ex){
+
+                }
         }
 
 
