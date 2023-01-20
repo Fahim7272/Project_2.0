@@ -92,7 +92,6 @@ public class HelloController {
                                 Scene scene = new Scene(root);
                                 Stage stage = new Stage();
                                 stage.initStyle(StageStyle.DECORATED.UNDECORATED);
-                                //stage.setTitle("Hello!");
                                 stage.setScene(scene);
                                 stage.show();
 
