@@ -43,7 +43,7 @@ public class HelloController {
         public void login(){
 
                 connect = DB.connectDb();
-                String sql =" ";
+                String sql ="SELECT * FROM `account` WHERE userID = ? and password = ?";
 
                 try{
                         pre = connect.prepareStatement(sql);
@@ -54,6 +54,7 @@ public class HelloController {
 
                         if(resultSet.next()){
 
+                                login_button.getScene().getWindow().hide();
                                 Parent root = FXMLLoader.load(getClass().getResource("login1.fxml"));
 
                                 Scene scene = new Scene(root);
