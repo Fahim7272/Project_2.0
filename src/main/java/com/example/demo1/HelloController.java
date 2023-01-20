@@ -6,17 +6,17 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ResourceBundle;
 
 public class HelloController {
 
@@ -24,10 +24,37 @@ public class HelloController {
         private TextField ID;
 
         @FXML
+        private TextField ID1;
+
+        @FXML
+        private Hyperlink admin_login;
+
+        @FXML
+        private Button exit;
+
+        @FXML
+        private Button exit1;
+
+        @FXML
+        private BorderPane login_admin;
+
+        @FXML
         private Button login_button;
 
         @FXML
+        private Button login_button1;
+
+        @FXML
+        private BorderPane login_student;
+
+        @FXML
         private PasswordField password;
+
+        @FXML
+        private PasswordField password1;
+
+        @FXML
+        private Hyperlink student_login;
 
         private Connection connect;
         private Statement statement;
@@ -37,6 +64,11 @@ public class HelloController {
 
         @FXML
         void exit(ActionEvent event) {
+                System.exit(0);
+        }
+
+        @FXML
+        void exit1(ActionEvent event) {
                 System.exit(0);
         }
 
@@ -77,6 +109,28 @@ public class HelloController {
 
                 }
         }
+
+
+        public void changeScene(ActionEvent event){
+
+                if(event.getSource() == student_login){
+                        login_student.setVisible(true);
+                        login_admin.setVisible(false);
+
+                        ID1.setText("");
+                        password1.setText("");
+                }
+
+                else if(event.getSource() == admin_login){
+                        login_admin.setVisible(true);
+                        login_student.setVisible(false);
+
+                        ID.setText("");
+                        password.setText("");
+                }
+        }
+
+
 
 
 }
