@@ -14,9 +14,12 @@
       <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/login1.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/Admin_Dashboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/Student_DashBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Admin_Dashboard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Student_DashBoard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/exitadmin.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/HelloController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +63,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/2.1 Project/ojdbc14-10.2.0.2.0.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/2.1 Project/fontawesomefx-8.9.jar&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -73,6 +76,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.demo1" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\2.1 Project\Project 2.0\src\main\resources\com\example\demo1" />
       <recent name="D:\2.1 Project\Project 2.0\src\main\resources" />
@@ -117,7 +123,10 @@
       <workItem from="1674118453535" duration="911000" />
       <workItem from="1674122822033" duration="369000" />
       <workItem from="1674203560262" duration="5683000" />
-      <workItem from="1674209524236" duration="708000" />
+      <workItem from="1674209524236" duration="1391000" />
+      <workItem from="1674228224198" duration="8961000" />
+      <workItem from="1674266210691" duration="5125000" />
+      <workItem from="1674304816062" duration="2686000" />
     </task>
     <task id="LOCAL-00001" summary="Student Login">
       <created>1673171997461</created>
@@ -175,7 +184,49 @@
       <option name="project" value="LOCAL" />
       <updated>1674209505004</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Student Login">
+      <created>1674210246215</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674210246215</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Student Login">
+      <created>1674230482439</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674230482439</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Student Login">
+      <created>1674234001144</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674234001144</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Student Login">
+      <created>1674234010665</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674234010665</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Student Login">
+      <created>1674234220131</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674234220131</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Student Login">
+      <created>1674304866268</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674304866268</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
