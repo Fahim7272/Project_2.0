@@ -105,7 +105,7 @@ public class HelloController {
                         }
 
                 }catch(Exception ex){
-
+                        System.out.println(ex);
                 }
         }
 
