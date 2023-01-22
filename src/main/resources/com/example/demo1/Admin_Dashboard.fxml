@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -20,38 +21,38 @@
                         <Font size="25.0" />
                     </font>
                 </Text>
-                <Button layoutX="35.0" layoutY="267.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Home">
+                <Button layoutX="35.0" layoutY="267.0" mnemonicParsing="false" onAction="#home" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Home">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button layoutX="34.0" layoutY="497.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Help Chat">
+                <Button layoutX="34.0" layoutY="497.0" mnemonicParsing="false" onAction="#help_chat" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Help Chat">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button layoutX="34.0" layoutY="451.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Classrooms">
+                <Button layoutX="34.0" layoutY="451.0" mnemonicParsing="false" onAction="#Classrooms" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Classrooms">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button layoutX="34.0" layoutY="405.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Result Update">
+                <Button layoutX="34.0" layoutY="405.0" mnemonicParsing="false" onAction="#result_update" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Result Update">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button layoutX="33.0" layoutY="359.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="Post Annnouncement ">
+                <Button layoutX="33.0" layoutY="359.0" mnemonicParsing="false" onAction="#Post_announce" prefHeight="27.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="Post Annnouncement ">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button layoutX="32.0" layoutY="313.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="New Student Info">
+                <Button layoutX="32.0" layoutY="313.0" mnemonicParsing="false" onAction="#new_student_data" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="New Student Info">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
                 <Circle fill="#798a96" layoutX="104.0" layoutY="88.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
-                <Button layoutX="34.0" layoutY="543.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Log Out">
+                <Button layoutX="34.0" layoutY="543.0" mnemonicParsing="false" onAction="#log_out" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Log Out">
                     <font>
                         <Font size="12.5" />
                     </font>
@@ -63,7 +64,7 @@
                 </Label>
             </children>
         </AnchorPane>
-        <Button layoutX="916.0" layoutY="4.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="34.0" style="-fx-background-color: #ffffff;" text="Button" textFill="WHITE">
+        <Button layoutX="916.0" layoutY="4.0" mnemonicParsing="false" onAction="#exit" prefHeight="28.0" prefWidth="34.0" style="-fx-background-color: #ffffff;" text="Button" textFill="WHITE">
             <graphic>
                 <ImageView fitHeight="37.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -72,7 +73,7 @@
                 </ImageView>
             </graphic>
         </Button>
-        <AnchorPane layoutX="201.0" layoutY="32.0" prefHeight="159.0" prefWidth="748.0" style="-fx-background-color: #7ed6df;">
+        <AnchorPane layoutX="201.0" layoutY="32.0" prefHeight="172.0" prefWidth="733.0" style="-fx-background-color: #7ed6df;">
             <children>
                 <Text layoutX="545.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EDU-WIT" wrappingWidth="202.40000000000003">
                     <font>
@@ -84,35 +85,108 @@
                         <Image url="@hat.png" />
                     </image>
                 </ImageView>
+            <AnchorPane layoutX="6.0" layoutY="112.0" prefHeight="60.0" prefWidth="750.0" visible="false">
+               <children>
+                  <Button layoutX="14.0" layoutY="32.0" mnemonicParsing="false" onAction="#General_info_insert" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="General" />
+                  <Button layoutX="194.0" layoutY="32.0" mnemonicParsing="false" onAction="#Contact_info_insert" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: white;" text="Contact Info" />
+               </children>
+            </AnchorPane>
+            <Text layoutX="303.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" underline="true" wrappingWidth="109.99999999999994">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Text>
             </children>
         </AnchorPane>
-      <Pane layoutX="206.0" layoutY="196.0" prefHeight="446.0" prefWidth="706.0" style="-fx-background-color: #ffffff;">
+      <AnchorPane layoutX="202.0" layoutY="204.0">
          <children>
-            <TextArea layoutX="64.0" layoutY="47.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text=" Total Students:">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </TextArea>
-            <TextArea layoutX="64.0" layoutY="231.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text="   Total Staffs:">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </TextArea>
-            <TextArea layoutX="364.0" layoutY="47.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text=" Total Teachers:">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </TextArea>
-            <TextArea layoutX="364.0" layoutY="231.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text="   Total Staffs:">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </TextArea>
-            <Label layoutX="138.0" layoutY="286.0" prefHeight="33.0" prefWidth="70.0" text="Label" />
-            <Label layoutX="438.0" layoutY="286.0" prefHeight="33.0" prefWidth="70.0" text="Label" />
-            <Label layoutX="438.0" layoutY="102.0" prefHeight="33.0" prefWidth="70.0" text="Label" />
-            <Label layoutX="146.0" layoutY="104.0" prefHeight="33.0" prefWidth="70.0" text="Label" />
+            <Pane prefHeight="438.0" prefWidth="744.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <TextArea layoutX="88.0" layoutY="65.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text=" Total Students:">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea layoutX="88.0" layoutY="249.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text="   Total Staffs:">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea layoutX="388.0" layoutY="65.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text=" Total Teachers:">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea layoutX="388.0" layoutY="249.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text="   Total Staffs:">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </TextArea>
+                  <Label layoutX="144.0" layoutY="304.0" prefHeight="33.0" prefWidth="70.0" text="Label" />
+                  <Label layoutX="462.0" layoutY="304.0" prefHeight="33.0" prefWidth="70.0" text="Label" />
+                  <Label layoutX="462.0" layoutY="120.0" prefHeight="33.0" prefWidth="70.0" text="Label" />
+                  <Label layoutX="170.0" layoutY="122.0" prefHeight="33.0" prefWidth="70.0" text="Label" />
+               </children>
+            </Pane>
          </children>
-      </Pane>
+      </AnchorPane>
+      <AnchorPane layoutX="204.0" layoutY="204.0" prefHeight="445.0" prefWidth="750.0" visible="false">
+         <children>
+            <Label layoutX="25.0" layoutY="42.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Student ID:" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="178.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Mother's Name:" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="144.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Father's Name:" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="110.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Last Name:" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="76.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="First Name: " textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="212.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Birth Date:" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="246.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Gender" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="280.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Religion" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="314.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Blood Group:" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="158.0" layoutY="42.0" prefHeight="26.0" prefWidth="316.0" />
+            <TextField layoutX="158.0" layoutY="76.0" prefHeight="26.0" prefWidth="316.0" />
+            <TextField layoutX="158.0" layoutY="110.0" prefHeight="26.0" prefWidth="316.0" />
+            <TextField layoutX="158.0" layoutY="144.0" prefHeight="26.0" prefWidth="316.0" />
+            <TextField layoutX="158.0" layoutY="178.0" prefHeight="26.0" prefWidth="316.0" />
+            <TextField layoutX="158.0" layoutY="212.0" prefHeight="26.0" prefWidth="316.0" />
+            <TextField layoutX="158.0" layoutY="246.0" prefHeight="26.0" prefWidth="316.0" />
+            <TextField layoutX="158.0" layoutY="280.0" prefHeight="26.0" prefWidth="316.0" />
+            <TextField layoutX="158.0" layoutY="314.0" prefHeight="26.0" prefWidth="316.0" />
+         </children>
+      </AnchorPane>
     </children>
 </AnchorPane>
