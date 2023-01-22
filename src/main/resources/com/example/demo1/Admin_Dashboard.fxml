@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="950.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="950.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.Admin_Dashboard">
     <children>
         <AnchorPane prefHeight="652.0" prefWidth="202.0" style="-fx-background-color: #7ed6df;">
             <children>
@@ -21,38 +21,38 @@
                         <Font size="25.0" />
                     </font>
                 </Text>
-                <Button layoutX="35.0" layoutY="267.0" mnemonicParsing="false" onAction="#home" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Home">
+                <Button fx:id="home" layoutX="35.0" layoutY="267.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Home">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button layoutX="34.0" layoutY="497.0" mnemonicParsing="false" onAction="#help_chat" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Help Chat">
+                <Button fx:id="help_chat" layoutX="34.0" layoutY="497.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Help Chat">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button layoutX="34.0" layoutY="451.0" mnemonicParsing="false" onAction="#Classrooms" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Classrooms">
+                <Button fx:id="Classrooms" layoutX="34.0" layoutY="451.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Classrooms">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button layoutX="34.0" layoutY="405.0" mnemonicParsing="false" onAction="#result_update" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Result Update">
+                <Button fx:id="result_update" layoutX="34.0" layoutY="405.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Result Update">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button layoutX="33.0" layoutY="359.0" mnemonicParsing="false" onAction="#Post_announce" prefHeight="27.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="Post Annnouncement ">
+                <Button fx:id="Post_announce" layoutX="33.0" layoutY="359.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="Post Annnouncement ">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button layoutX="32.0" layoutY="313.0" mnemonicParsing="false" onAction="#new_student_data" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="New Student Info">
+                <Button fx:id="new_student_data" layoutX="32.0" layoutY="313.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="New Student Info">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
                 <Circle fill="#798a96" layoutX="104.0" layoutY="88.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
-                <Button layoutX="34.0" layoutY="543.0" mnemonicParsing="false" onAction="#log_out" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Log Out">
+                <Button fx:id="log_out" layoutX="34.0" layoutY="543.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Log Out">
                     <font>
                         <Font size="12.5" />
                     </font>
@@ -73,7 +73,7 @@
                 </ImageView>
             </graphic>
         </Button>
-        <AnchorPane layoutX="201.0" layoutY="32.0" prefHeight="172.0" prefWidth="733.0" style="-fx-background-color: #7ed6df;">
+        <AnchorPane layoutX="201.0" layoutY="32.0" prefHeight="146.0" prefWidth="757.0" style="-fx-background-color: #7ed6df;">
             <children>
                 <Text layoutX="545.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EDU-WIT" wrappingWidth="202.40000000000003">
                     <font>
@@ -85,20 +85,15 @@
                         <Image url="@hat.png" />
                     </image>
                 </ImageView>
-            <AnchorPane layoutX="6.0" layoutY="112.0" prefHeight="60.0" prefWidth="750.0" visible="false">
+            <AnchorPane fx:id="General_info_pane" layoutX="6.0" layoutY="112.0" prefHeight="60.0" prefWidth="750.0" visible="false">
                <children>
-                  <Button layoutX="14.0" layoutY="32.0" mnemonicParsing="false" onAction="#General_info_insert" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="General" />
-                  <Button layoutX="194.0" layoutY="32.0" mnemonicParsing="false" onAction="#Contact_info_insert" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: white;" text="Contact Info" />
+                  <Button fx:id="General_info_insert" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="General" />
+                  <Button fx:id="Contact_info_insert" layoutX="194.0" layoutY="32.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: white;" text="Contact Info" />
                </children>
             </AnchorPane>
-            <Text layoutX="303.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" underline="true" wrappingWidth="109.99999999999994">
-               <font>
-                  <Font size="31.0" />
-               </font>
-            </Text>
             </children>
         </AnchorPane>
-      <AnchorPane layoutX="202.0" layoutY="204.0">
+      <AnchorPane fx:id="home_pane" layoutX="202.0" layoutY="204.0">
          <children>
             <Pane prefHeight="438.0" prefWidth="744.0" style="-fx-background-color: #ffffff;">
                <children>
@@ -130,7 +125,7 @@
             </Pane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="204.0" layoutY="204.0" prefHeight="445.0" prefWidth="750.0" visible="false">
+      <AnchorPane fx:id="new_student_pane" layoutX="204.0" layoutY="204.0" prefHeight="445.0" prefWidth="750.0" visible="false">
          <children>
             <Label layoutX="25.0" layoutY="42.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Student ID:" textAlignment="CENTER">
                <font>

@@ -2,59 +2,67 @@ package com.example.demo1;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Admin_Dashboard {
 
     @FXML
-    void Classrooms(ActionEvent event) {
-
-    }
+    private Button Classrooms;
 
     @FXML
-    void Contact_info_insert(ActionEvent event) {
-
-    }
+    private Button Contact_info_insert;
 
     @FXML
-    void General_info_insert(ActionEvent event) {
-
-    }
+    private Button General_info_insert;
 
     @FXML
-    void Post_announce(ActionEvent event) {
+    private Button Post_announce;
 
-    }
+    @FXML
+    private Button help_chat;
+
+    @FXML
+    private Button home;
+
+    @FXML
+    private AnchorPane home_pane;
+
+    @FXML
+    private AnchorPane General_info_pane;
+
+    @FXML
+    private Button log_out;
+
+    @FXML
+    private Button new_student_data;
+
+    @FXML
+    private AnchorPane new_student_pane;
+
+    @FXML
+    private Button result_update;
 
     @FXML
     void exit(ActionEvent event) {
-
+        System.exit(0);
     }
 
-    @FXML
-    void help_chat(ActionEvent event) {
 
-    }
-
-    @FXML
-    void home(ActionEvent event) {
-
-    }
-
-    @FXML
-    void log_out(ActionEvent event) {
-
-    }
-
-    @FXML
-    void new_student_data(ActionEvent event) {
-
-    }
-
-    @FXML
-    void result_update(ActionEvent event) {
-
+    public void changeScene(ActionEvent event){
+        if(event.getSource() == home){
+            home_pane.setVisible(true);
+            new_student_pane.setVisible(false);
+            General_info_pane.setVisible(false);
+        }
+        else if(event.getSource() == new_student_data){
+            new_student_pane.setVisible(true);
+            General_info_pane.setVisible(true);
+            home_pane.setVisible(false);
+        }
     }
 
 }

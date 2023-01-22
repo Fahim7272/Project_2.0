@@ -87,7 +87,7 @@ public class HelloController {
                         if(resultSet.next()){
 
                                 login_button.getScene().getWindow().hide();
-                                Parent root = FXMLLoader.load(getClass().getResource("Student_DashBoard.fxml"));
+                                Parent root = FXMLLoader.load(getClass().getResource("Admin_DashBoard.fxml"));
 
                                 Scene scene = new Scene(root);
                                 Stage stage = new Stage();
