@@ -14,7 +14,6 @@
       <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/Admin_Dashboard.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/Student_DashBoard.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Admin_Dashboard.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Student_DashBoard.fxml" afterDir="false" />
@@ -126,7 +125,7 @@
       <workItem from="1674209524236" duration="1391000" />
       <workItem from="1674228224198" duration="8961000" />
       <workItem from="1674266210691" duration="5125000" />
-      <workItem from="1674304816062" duration="2686000" />
+      <workItem from="1674304816062" duration="3665000" />
     </task>
     <task id="LOCAL-00001" summary="Student Login">
       <created>1673171997461</created>
@@ -226,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674304866268</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Student Login">
+      <created>1674323046846</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1674323046846</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
