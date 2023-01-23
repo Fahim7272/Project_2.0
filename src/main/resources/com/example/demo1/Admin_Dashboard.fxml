@@ -306,7 +306,7 @@
             <TextField fx:id="post_writer" alignment="TOP_LEFT" layoutX="57.0" layoutY="98.0" prefHeight="155.0" prefWidth="630.0" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="result_update_pane" layoutX="204.0" layoutY="204.0" prefHeight="446.0" prefWidth="744.0">
+      <AnchorPane fx:id="result_update_pane" layoutX="204.0" layoutY="204.0" prefHeight="446.0" prefWidth="744.0" visible="false">
          <children>
             <AnchorPane fx:id="result_update_pane1" layoutY="37.0" prefHeight="411.0" prefWidth="744.0">
                <children>
@@ -364,30 +364,46 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="204.0" layoutY="204.0" prefHeight="446.0" prefWidth="744.0" visible="false">
+      <AnchorPane layoutX="204.0" layoutY="204.0" prefHeight="446.0" prefWidth="744.0">
          <children>
-            <Label layoutX="309.0" layoutY="24.0" text="Classrooms">
+            <Label layoutX="294.0" layoutY="14.0" text="Classrooms">
                <font>
                   <Font name="System Bold Italic" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="209.0" layoutY="111.0" text="Class: ">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <ChoiceBox layoutX="307.0" layoutY="112.0" prefWidth="150.0" />
-            <Label layoutX="209.0" layoutY="165.0" text="Section: ">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <ChoiceBox layoutX="307.0" layoutY="166.0" prefWidth="150.0" />
-            <Button layoutX="346.0" layoutY="234.0" mnemonicParsing="false" style="-fx-background-color: #7ed6df;" text="Enter">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
+            <AnchorPane layoutY="60.0" prefHeight="387.0" prefWidth="744.0" visible="false">
+               <children>
+                  <ChoiceBox layoutX="297.0" layoutY="124.0" prefWidth="150.0" />
+                  <Label layoutX="201.0" layoutY="63.0" text="Class: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox layoutX="297.0" layoutY="64.0" prefWidth="150.0" />
+                  <Label layoutX="200.0" layoutY="123.0" text="Section: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="350.0" layoutY="203.0" mnemonicParsing="false" style="-fx-background-color: #7ed6df;" text="Enter">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="11.0" layoutY="94.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView prefHeight="338.0" prefWidth="722.0">
+                     <columns>
+                        <TableColumn prefWidth="259.99998474121094" text="Room no" />
+                        <TableColumn prefWidth="151.20001220703125" text="Classes" />
+                        <TableColumn prefWidth="176.0" />
+                        <TableColumn prefWidth="139.199951171875" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
     </children>
