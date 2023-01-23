@@ -50,7 +50,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                 </Button>
-                <Button fx:id="result_update" layoutX="34.0" layoutY="405.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Result Update">
+                <Button fx:id="result_update" layoutX="34.0" layoutY="405.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Update Result ">
                     <font>
                         <Font size="12.5" />
                     </font>
@@ -308,7 +308,7 @@
       </AnchorPane>
       <AnchorPane fx:id="result_update_pane" layoutX="204.0" layoutY="204.0" prefHeight="446.0" prefWidth="744.0">
          <children>
-            <AnchorPane fx:id="result_update_pane1" layoutY="58.0" prefHeight="390.0" prefWidth="744.0" visible="false">
+            <AnchorPane fx:id="result_update_pane1" layoutY="37.0" prefHeight="411.0" prefWidth="744.0">
                <children>
                   <Label layoutX="226.0" layoutY="58.0" text="Class: ">
                      <font>
@@ -336,27 +336,58 @@
                   <Button fx:id="Next_page_result" layoutX="361.0" layoutY="178.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="26.0" prefWidth="52.0" style="-fx-background-color: #7ed6df;" text="Enter" />
                </children>
             </AnchorPane>
-            <Text layoutX="293.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result Update">
+            <Text layoutX="293.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Result">
                <font>
                   <Font name="System Bold Italic" size="26.0" />
                </font>
             </Text>
-            <AnchorPane layoutY="31.0" prefHeight="418.0" prefWidth="744.0">
+            <AnchorPane fx:id="result_update_pane2" layoutY="31.0" prefHeight="418.0" prefWidth="744.0" visible="false">
                <children>
-                  <TableView layoutX="11.0" layoutY="15.0" prefHeight="361.0" prefWidth="722.0">
+                  <TableView layoutX="11.0" layoutY="29.0" prefHeight="338.0" prefWidth="722.0">
                     <columns>
-                      <TableColumn prefWidth="99.20005798339844" text="C1" />
-                      <TableColumn prefWidth="91.20001220703125" text="C2" />
-                        <TableColumn prefWidth="105.5999755859375" text="Column X" />
-                        <TableColumn prefWidth="93.60003662109375" text="Column X" />
-                        <TableColumn text="Column X" />
-                        <TableColumn text="Column X" />
-                        <TableColumn prefWidth="79.199951171875" text="Column X" />
-                        <TableColumn prefWidth="89.599853515625" text="Column X" />
+                      <TableColumn prefWidth="99.20005798339844" text="Name" />
+                      <TableColumn prefWidth="91.20001220703125" text="ID" />
+                        <TableColumn prefWidth="105.5999755859375" text="Math" />
+                        <TableColumn prefWidth="93.60003662109375" text="English" />
+                        <TableColumn text="Science" />
+                        <TableColumn text="Drawing" />
+                        <TableColumn prefWidth="79.199951171875" text="Bangla" />
+                        <TableColumn prefWidth="89.599853515625" text="Total Marks" />
                     </columns>
                   </TableView>
+                  <Button fx:id="update_btn" layoutX="661.0" layoutY="380.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: #7ed6df;" text="Update">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
             </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="204.0" layoutY="204.0" prefHeight="446.0" prefWidth="744.0" visible="false">
+         <children>
+            <Label layoutX="309.0" layoutY="24.0" text="Classrooms">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="209.0" layoutY="111.0" text="Class: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox layoutX="307.0" layoutY="112.0" prefWidth="150.0" />
+            <Label layoutX="209.0" layoutY="165.0" text="Section: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox layoutX="307.0" layoutY="166.0" prefWidth="150.0" />
+            <Button layoutX="346.0" layoutY="234.0" mnemonicParsing="false" style="-fx-background-color: #7ed6df;" text="Enter">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
       </AnchorPane>
     </children>
