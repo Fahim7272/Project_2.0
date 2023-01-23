@@ -41,7 +41,7 @@
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button fx:id="Post_announce" layoutX="33.0" layoutY="359.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="Post Annnouncement ">
+                <Button fx:id="Post_announce" layoutX="33.0" layoutY="359.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="27.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="Post Annnouncement ">
                     <font>
                         <Font size="12.5" />
                     </font>
@@ -183,5 +183,17 @@
             <TextField layoutX="158.0" layoutY="314.0" prefHeight="26.0" prefWidth="316.0" />
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="announce_pane" layoutX="204.0" layoutY="204.0" prefHeight="446.0" prefWidth="744.0" visible="false">
+         <children>
+            <Button fx:id="post_announce_btn" layoutX="604.0" layoutY="274.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #7ed6df;" text="Post" />
+            <Text layoutX="227.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Post Announcement">
+               <font>
+                  <Font name="System Bold Italic" size="26.0" />
+               </font>
+            </Text>
+            <TextField fx:id="post_writer" layoutX="57.0" layoutY="89.0" prefHeight="155.0" prefWidth="630.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="result_update_pane" layoutX="204.0" layoutY="204.0" prefHeight="446.0" prefWidth="744.0" />
     </children>
 </AnchorPane>

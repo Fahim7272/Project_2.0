@@ -1,11 +1,13 @@
 package com.example.demo1;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+//import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -51,7 +53,16 @@ public class Admin_Dashboard {
     private AnchorPane new_student_pane;
 
     @FXML
+    private AnchorPane announce_pane;
+
+    @FXML
     private Button result_update;
+
+    @FXML
+    private Button post_announce_btn;
+
+    @FXML
+    private TextField post_writer;
 
     @FXML
     void exit(ActionEvent event) {
@@ -64,10 +75,18 @@ public class Admin_Dashboard {
             home_pane.setVisible(true);
             new_student_pane.setVisible(false);
             General_info_pane.setVisible(false);
+            announce_pane.setVisible(false);
         }
         else if(event.getSource() == new_student_data){
             new_student_pane.setVisible(true);
             General_info_pane.setVisible(true);
+            home_pane.setVisible(false);
+            announce_pane.setVisible(false);
+        }
+        else if(event.getSource() == Post_announce){
+            announce_pane.setVisible(true);
+            new_student_pane.setVisible(false);
+            General_info_pane.setVisible(false);
             home_pane.setVisible(false);
         }
 
