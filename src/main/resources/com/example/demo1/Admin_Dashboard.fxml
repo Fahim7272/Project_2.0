@@ -249,7 +249,7 @@
             <Button fx:id="jump_to_contact" layoutX="664.0" layoutY="394.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="28.0" prefWidth="48.0" style="-fx-background-color: #7ed6df;" text="Next" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="contact_info_pane" layoutX="202.0" layoutY="204.0" prefHeight="450.0" prefWidth="744.0">
+      <AnchorPane fx:id="contact_info_pane" layoutX="202.0" layoutY="204.0" prefHeight="450.0" prefWidth="744.0" visible="false">
          <children>
             <Label layoutX="28.0" layoutY="22.0" text="Gaurdian's Contact Information">
                <font>
@@ -306,9 +306,9 @@
             <TextField fx:id="post_writer" alignment="TOP_LEFT" layoutX="57.0" layoutY="98.0" prefHeight="155.0" prefWidth="630.0" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="result_update_pane" layoutX="204.0" layoutY="204.0" prefHeight="446.0" prefWidth="744.0" visible="false">
+      <AnchorPane fx:id="result_update_pane" layoutX="204.0" layoutY="204.0" prefHeight="446.0" prefWidth="744.0">
          <children>
-            <AnchorPane fx:id="result_update_pane1" layoutY="58.0" prefHeight="390.0" prefWidth="744.0">
+            <AnchorPane fx:id="result_update_pane1" layoutY="58.0" prefHeight="390.0" prefWidth="744.0" visible="false">
                <children>
                   <Label layoutX="226.0" layoutY="58.0" text="Class: ">
                      <font>
@@ -336,25 +336,27 @@
                   <Button fx:id="Next_page_result" layoutX="361.0" layoutY="178.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="26.0" prefWidth="52.0" style="-fx-background-color: #7ed6df;" text="Enter" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="result_update_pane2" prefHeight="200.0" prefWidth="200.0" visible="false">
-               <children>
-                  <TableView layoutY="65.0" prefHeight="384.0" prefWidth="744.0">
-                    <columns>
-                      <TableColumn prefWidth="109.59996032714844" text="C1" />
-                      <TableColumn prefWidth="80.79998779296875" text="C2" />
-                        <TableColumn minWidth="5.60003662109375" prefWidth="79.20001220703125" text="Column X" />
-                        <TableColumn prefWidth="86.39996337890625" text="Column X" />
-                        <TableColumn prefWidth="79.99993896484375" text="Column X" />
-                        <TableColumn prefWidth="104.0" text="Column X" />
-                    </columns>
-                  </TableView>
-               </children>
-            </AnchorPane>
-            <Text layoutX="287.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result Update">
+            <Text layoutX="293.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result Update">
                <font>
                   <Font name="System Bold Italic" size="26.0" />
                </font>
             </Text>
+            <AnchorPane layoutY="31.0" prefHeight="418.0" prefWidth="744.0">
+               <children>
+                  <TableView layoutX="11.0" layoutY="15.0" prefHeight="361.0" prefWidth="722.0">
+                    <columns>
+                      <TableColumn prefWidth="99.20005798339844" text="C1" />
+                      <TableColumn prefWidth="91.20001220703125" text="C2" />
+                        <TableColumn prefWidth="105.5999755859375" text="Column X" />
+                        <TableColumn prefWidth="93.60003662109375" text="Column X" />
+                        <TableColumn text="Column X" />
+                        <TableColumn text="Column X" />
+                        <TableColumn prefWidth="79.199951171875" text="Column X" />
+                        <TableColumn prefWidth="89.599853515625" text="Column X" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
     </children>

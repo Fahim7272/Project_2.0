@@ -130,6 +130,7 @@ public class Admin_Dashboard {
             result_update_pane.setVisible(false);
             result_update_pane1.setVisible(false);
             result_update_pane2.setVisible(false);
+            contact_info_pane.setVisible(false);
         }
         else if(event.getSource() == new_student_data){
             new_student_pane.setVisible(true);
@@ -139,6 +140,7 @@ public class Admin_Dashboard {
             result_update_pane.setVisible(false);
             result_update_pane1.setVisible(false);
             result_update_pane2.setVisible(false);
+            contact_info_pane.setVisible(false);
         }
         else if(event.getSource() == Post_announce){
             announce_pane.setVisible(true);
@@ -148,14 +150,17 @@ public class Admin_Dashboard {
             result_update_pane.setVisible(false);
             result_update_pane1.setVisible(false);
             result_update_pane2.setVisible(false);
+            contact_info_pane.setVisible(false);
         }
         else if(event.getSource() == result_update){
             result_update_pane.setVisible(true);
             result_update_pane1.setVisible(true);
+            result_update_pane2.setVisible(false);
             announce_pane.setVisible(false);
             new_student_pane.setVisible(false);
             General_info_pane.setVisible(false);
             home_pane.setVisible(false);
+            contact_info_pane.setVisible(false);
         }
         else if(event.getSource() == Next_page_result){
             result_update_pane.setVisible(true);
@@ -164,6 +169,37 @@ public class Admin_Dashboard {
             announce_pane.setVisible(false);
             new_student_pane.setVisible(false);
             General_info_pane.setVisible(false);
+            home_pane.setVisible(false);
+            contact_info_pane.setVisible(false);
+        }
+        else if(event.getSource() == back_to_new_info || event.getSource() == General_info_insert){
+            new_student_pane.setVisible(true);
+            contact_info_pane.setVisible(false);
+            result_update_pane.setVisible(false);
+            result_update_pane1.setVisible(false);
+            result_update_pane2.setVisible(false);
+            announce_pane.setVisible(false);
+            General_info_pane.setVisible(true);
+            home_pane.setVisible(false);
+        }
+        else if(event.getSource() == jump_to_contact || event.getSource() == Contact_info_insert){
+            contact_info_pane.setVisible(true);
+            new_student_pane.setVisible(false);
+            result_update_pane.setVisible(false);
+            result_update_pane1.setVisible(false);
+            result_update_pane2.setVisible(false);
+            announce_pane.setVisible(false);
+            General_info_pane.setVisible(true);
+            home_pane.setVisible(false);
+        }
+        else if(event.getSource() == save_new_data){
+            new_student_pane.setVisible(true);
+            contact_info_pane.setVisible(false);
+            result_update_pane.setVisible(false);
+            result_update_pane1.setVisible(false);
+            result_update_pane2.setVisible(false);
+            announce_pane.setVisible(false);
+            General_info_pane.setVisible(true);
             home_pane.setVisible(false);
         }
 
