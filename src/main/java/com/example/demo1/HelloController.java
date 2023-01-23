@@ -110,6 +110,45 @@ public class HelloController {
         }
 
 
+
+        public void login_admin(){
+
+                connect = DB.connectDb();
+                String sql ="SELECT * FROM `admin_login` WHERE admin_ID = ? and admin_pass = ?";
+
+                try{
+                        pre = connect.prepareStatement(sql);
+                        pre.setString(1, ID1.getText());
+                        pre.setString(2, password1.getText());
+
+                        resultSet = pre.executeQuery();
+
+                        if(resultSet.next()){
+
+                                login_button1.getScene().getWindow().hide();
+                                Parent root = FXMLLoader.load(getClass().getResource("Admin_DashBoard.fxml"));
+
+                                Scene scene = new Scene(root);
+                                Stage stage = new Stage();
+                                stage.initStyle(StageStyle.DECORATED.UNDECORATED);
+                                stage.setScene(scene);
+                                stage.show();
+
+                        }
+                        else{
+                                Alert alert = new Alert(Alert.AlertType.ERROR);
+                                alert.setTitle("Error");
+                                alert.setHeaderText(null);
+                                alert.setContentText("Wrong Username or Password");
+                                alert.showAndWait();
+                        }
+
+                }catch(Exception ex){
+                        System.out.println(ex);
+                }
+        }
+
+
         public void changeScene(ActionEvent event){
 
                 if(event.getSource() == student_login){

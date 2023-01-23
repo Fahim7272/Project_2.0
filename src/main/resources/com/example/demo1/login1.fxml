@@ -11,7 +11,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
    <children>
       <BorderPane fx:id="login_student" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0">
@@ -92,7 +91,7 @@
                   </Button>
                   <TextField fx:id="ID1" layoutX="118.0" layoutY="209.0" prefHeight="26.0" prefWidth="170.0" promptText="ID" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
                   <PasswordField fx:id="password1" layoutX="117.0" layoutY="266.0" prefHeight="26.0" prefWidth="170.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
-                  <Button fx:id="login_button1" layoutX="173.0" layoutY="325.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #7ed6df;" text="Login" textFill="#000000b0" />
+                  <Button fx:id="login_button1" layoutX="173.0" layoutY="325.0" mnemonicParsing="false" onAction="#login_admin" style="-fx-background-color: #7ed6df;" text="Login" textFill="#000000b0" />
                   <Text fill="#7ed6df" layoutX="135.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN LOGIN">
                      <font>
                         <Font size="18.0" />
