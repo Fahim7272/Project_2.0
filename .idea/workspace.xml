@@ -14,9 +14,13 @@
       <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Student_DashBoard.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Teachers_DashBoard.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/exitadmin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/MainApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Admin_Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Admin_Dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Student_DashBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Student_DashBoard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo1/login1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/login1.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +132,8 @@
       <workItem from="1674406344350" duration="5063000" />
       <workItem from="1674495300112" duration="882000" />
       <workItem from="1674496191052" duration="2709000" />
-      <workItem from="1674501836506" duration="5139000" />
+      <workItem from="1674501836506" duration="5397000" />
+      <workItem from="1674738013163" duration="1420000" />
     </task>
     <task id="LOCAL-00001" summary="Student Login">
       <created>1673171997461</created>
@@ -319,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674508217041</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Student Login">
+      <created>1674508816230</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1674508816230</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

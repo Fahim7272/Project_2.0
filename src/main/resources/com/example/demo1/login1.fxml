@@ -15,14 +15,14 @@
    <children>
       <BorderPane fx:id="login_student" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0">
          <left>
-            <AnchorPane prefHeight="506.0" prefWidth="340.0" style="-fx-background-color: #7ed6df;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="506.0" prefWidth="370.0" style="-fx-background-color: #7ed6df;" BorderPane.alignment="CENTER">
                <children>
                   <ImageView fitHeight="123.0" fitWidth="161.0" layoutX="108.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@hat.png" />
                      </image>
                   </ImageView>
-                  <Text fill="#535c68" layoutX="145.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edu-Wit" wrappingWidth="233.33669662475586">
+                  <Text fill="#535c68" layoutX="118.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wittens School" wrappingWidth="161.33669662475586">
                      <font>
                         <Font size="22.0" />
                      </font>
@@ -121,14 +121,14 @@
             </AnchorPane>
          </center>
          <right>
-            <AnchorPane prefHeight="506.0" prefWidth="312.0" style="-fx-background-color: #7ed6df;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="506.0" prefWidth="380.0" style="-fx-background-color: #7ed6df;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="123.0" fitWidth="161.0" layoutX="108.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="123.0" fitWidth="161.0" layoutX="112.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@hat.png" />
                      </image>
                   </ImageView>
-                  <Text fill="#535c68" layoutX="145.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edu-Wit" wrappingWidth="233.33669662475586">
+                  <Text fill="#535c68" layoutX="123.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wittens School" wrappingWidth="153.33669662475586">
                      <font>
                         <Font size="22.0" />
                      </font>
