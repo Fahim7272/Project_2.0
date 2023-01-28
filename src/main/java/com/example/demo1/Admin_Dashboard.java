@@ -1,5 +1,8 @@
 package com.example.demo1;
 
+import com.mysql.jdbc.PreparedStatement;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.fxml.FXML;
@@ -13,9 +16,11 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.Objects;
-import java.util.ResourceBundle;
+import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 
 public class Admin_Dashboard {
 
@@ -50,6 +55,9 @@ public class Admin_Dashboard {
     private TextField blood_grp_in;
 
     @FXML
+    private TextField class_in;
+
+    @FXML
     private AnchorPane contact_info_pane;
 
     @FXML
@@ -60,9 +68,6 @@ public class Admin_Dashboard {
 
     @FXML
     private TextField gender_in;
-
-    @FXML
-    private Button help_chat;
 
     @FXML
     private Button home;
@@ -113,6 +118,9 @@ public class Admin_Dashboard {
     private Button save_new_data;
 
     @FXML
+    private TextField section_in;
+
+    @FXML
     private TextField std_ID_input;
 
     @FXML
@@ -124,6 +132,11 @@ public class Admin_Dashboard {
         System.exit(0);
     }
 
+
+    private Connection connect;
+    private Statement statement;
+    private PreparedStatement prep;
+    private ResultSet res;
 
     public void changeScene(ActionEvent event){
         if(event.getSource() == home){
@@ -240,6 +253,53 @@ public class Admin_Dashboard {
             stage.setScene(scene);
             stage.show();
         }
+    }
+
+
+    public ObservableList<new_data> list_Data(){
+        ObservableList<new_data> data_List = FXCollections.observableArrayList();
+         connect = DB.connectDb();
+
+        String sql = "SELECT * FROM `new_student_data`";
+
+        try{
+            statement = connect.createStatement();
+            res = statement.executeQuery(sql);
+
+            new_data data;
+
+            while(res.next()){
+                data = new new_data(res.getInt("ID"),
+                        res.getString("classs"),
+                        res.getString("section"),
+                        res.getString("first_name"),
+                        res.getString("last_name"),
+                        res.getString("fathers_name"),
+                        res.getString("mothers_name"),
+                        res.getString("birth_date"),
+                        res.getString("gender"),
+                        res.getInt("birth_reg"),
+                        res.getString("religion"),
+                        res.getString("image"),
+                        res.getString("blood_grp"),
+                        res.getInt("fathers_mobile"),
+                        res.getInt("mothers_mobile"),
+                        res.getString("email"),
+                        res.getString("present_address"),
+                        res.getString("permanent_address")
+                );
+
+                data_List.addAll(data);
+            }
+
+
+
+        }catch(Exception ex){
+
+        }
+
+        return data_List;
+
     }
 
 }

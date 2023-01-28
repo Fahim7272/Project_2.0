@@ -5,22 +5,32 @@ import java.math.BigInteger;
 public class new_data {
 
     private static Integer id;
+    private static String classs;
+    private static String section;
     private static String first_name;
     private static String last_name;
     private static String fathers_name;
     private static String mothers_name;
     private static String birth_date;
     private static String gender;
-    private static BigInteger birth_reg;
+    private static int birth_reg;
     private static String religion;
     private static String image;
     private static String blood_grp;
+    private static int fathers_mobile;
+    private static int mothers_mobile;
+    private static String email;
+    private static String present_address;
+    private static String permanent_address;
+
 
     public new_data() {
     }
 
-    public new_data(Integer id, String first_name, String last_name, String fathers_name, String mothers_name, String birth_date, String gender, BigInteger birth_reg, String religion, String image, String blood_grp) {
+    public new_data(Integer id, String classs, String section, String first_name, String last_name, String fathers_name, String mothers_name, String birth_date, String gender, int birth_reg, String religion, String image, String blood_grp, int fathers_mobile, int mothers_mobile, String email, String present_address, String permanent_address) {
         this.id = id;
+        this.classs = classs;
+        this.section = section;
         this.first_name = first_name;
         this.last_name = last_name;
         this.fathers_name = fathers_name;
@@ -31,6 +41,11 @@ public class new_data {
         this.religion = religion;
         this.image = image;
         this.blood_grp = blood_grp;
+        this.fathers_mobile = fathers_mobile;
+        this.mothers_mobile = mothers_mobile;
+        this.email = email;
+        this.present_address = present_address;
+        this.permanent_address = permanent_address;
     }
 
 

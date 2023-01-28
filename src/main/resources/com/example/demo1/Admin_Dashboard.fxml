@@ -34,14 +34,6 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                 </Button>
-                <Button fx:id="help_chat" layoutX="34.0" layoutY="497.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Help Chat">
-                    <font>
-                        <Font size="12.5" />
-                    </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-                </Button>
                 <Button fx:id="Classrooms" layoutX="34.0" layoutY="451.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Classrooms">
                     <font>
                         <Font size="12.5" />
@@ -75,7 +67,7 @@
                </cursor>
                 </Button>
                 <Circle fill="#798a96" layoutX="104.0" layoutY="88.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
-                <Button fx:id="log_out" layoutX="34.0" layoutY="543.0" mnemonicParsing="false" onAction="#logOut" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Log Out">
+                <Button fx:id="log_out" layoutX="34.0" layoutY="493.0" mnemonicParsing="false" onAction="#logOut" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Log Out">
                     <font>
                         <Font size="12.5" />
                     </font>
@@ -154,99 +146,119 @@
             </Pane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="new_student_pane" layoutX="204.0" layoutY="204.0" prefHeight="445.0" prefWidth="750.0" visible="false">
+      <AnchorPane fx:id="new_student_pane" layoutX="204.0" layoutY="204.0" prefHeight="445.0" prefWidth="750.0">
          <children>
-            <Label layoutX="25.0" layoutY="42.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Student ID:" textAlignment="CENTER">
+            <Label layoutX="25.0" layoutY="109.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Student ID:" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="178.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Mother's Name:" textAlignment="CENTER">
+            <Label layoutX="25.0" layoutY="246.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Mother's Name:" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="144.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Father's Name:" textAlignment="CENTER">
+            <Label layoutX="25.0" layoutY="212.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Father's Name:" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="110.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Last Name:" textAlignment="CENTER">
+            <Label layoutX="25.0" layoutY="73.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Last Name:" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="76.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="First Name: " textAlignment="CENTER">
+            <Label layoutX="25.0" layoutY="39.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="First Name: " textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="212.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Birth Date:" textAlignment="CENTER">
+            <Label layoutX="25.0" layoutY="280.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Birth Date:" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="246.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Gender" textAlignment="CENTER">
+            <Label layoutX="451.0" layoutY="207.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Gender: " textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="280.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Religion" textAlignment="CENTER">
+            <Label layoutX="451.0" layoutY="242.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Religion:" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label layoutX="25.0" layoutY="314.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Blood Group:" textAlignment="CENTER">
+            <Label layoutX="450.0" layoutY="278.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Blood Group:" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="std_ID_input" layoutX="158.0" layoutY="43.0" prefHeight="26.0" prefWidth="316.0">
+            <TextField fx:id="std_ID_input" layoutX="158.0" layoutY="110.0" prefHeight="26.0" prefWidth="243.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <TextField fx:id="first_name" layoutX="158.0" layoutY="76.0" prefHeight="26.0" prefWidth="316.0">
+            <TextField fx:id="first_name" layoutX="158.0" layoutY="39.0" prefHeight="26.0" prefWidth="243.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <TextField fx:id="last_name" layoutX="158.0" layoutY="110.0" prefHeight="26.0" prefWidth="316.0">
+            <TextField fx:id="last_name" layoutX="158.0" layoutY="73.0" prefHeight="26.0" prefWidth="243.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <TextField fx:id="fathers_name" layoutX="158.0" layoutY="144.0" prefHeight="26.0" prefWidth="316.0">
+            <TextField fx:id="fathers_name" layoutX="158.0" layoutY="212.0" prefHeight="26.0" prefWidth="243.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <TextField fx:id="mothers_name" layoutX="158.0" layoutY="178.0" prefHeight="26.0" prefWidth="316.0">
+            <TextField fx:id="mothers_name" layoutX="158.0" layoutY="246.0" prefHeight="26.0" prefWidth="243.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <TextField fx:id="birth_date_in" layoutX="158.0" layoutY="212.0" prefHeight="26.0" prefWidth="316.0">
+            <TextField fx:id="birth_date_in" layoutX="158.0" layoutY="280.0" prefHeight="26.0" prefWidth="243.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <TextField fx:id="gender_in" layoutX="158.0" layoutY="246.0" prefHeight="26.0" prefWidth="316.0">
+            <TextField fx:id="religion_in" layoutX="546.0" layoutY="243.0" prefHeight="26.0" prefWidth="150.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <TextField fx:id="religion_in" layoutX="158.0" layoutY="280.0" prefHeight="26.0" prefWidth="316.0">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </TextField>
-            <TextField fx:id="blood_grp_in" layoutX="158.0" layoutY="314.0" prefHeight="26.0" prefWidth="316.0">
+            <TextField fx:id="blood_grp_in" layoutX="546.0" layoutY="278.0" prefHeight="26.0" prefWidth="150.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
             <Button fx:id="jump_to_contact" layoutX="664.0" layoutY="394.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="28.0" prefWidth="48.0" style="-fx-background-color: #7ed6df;" text="Next" />
+            <TextField fx:id="gender_in" layoutX="546.0" layoutY="207.0" prefHeight="26.0" prefWidth="150.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label layoutX="25.0" layoutY="143.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Class: " textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="177.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Section: " textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="class_in" layoutX="158.0" layoutY="143.0" prefHeight="26.0" prefWidth="243.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="section_in" layoutX="158.0" layoutY="177.0" prefHeight="26.0" prefWidth="243.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="contact_info_pane" layoutX="202.0" layoutY="204.0" prefHeight="450.0" prefWidth="744.0" visible="false">
@@ -364,7 +376,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="204.0" layoutY="204.0" prefHeight="446.0" prefWidth="744.0">
+      <AnchorPane layoutX="204.0" layoutY="204.0" prefHeight="446.0" prefWidth="744.0" visible="false">
          <children>
             <Label layoutX="294.0" layoutY="14.0" text="Classrooms">
                <font>

@@ -22,7 +22,7 @@ public class MainApplication extends Application {
         //FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("login1.fxml"));
         //Scene scene = new Scene(fxmlLoader.load(), 765, 506);
 
-        Parent root = FXMLLoader.load(getClass().getResource("Teachers_DashBoard.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("login1.fxml"));
 
         Scene scene = new Scene(root);
 

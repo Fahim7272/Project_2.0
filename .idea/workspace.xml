@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="462f9eb6-cb33-48b7-9317-b4f8f9d845eb" name="Changes" comment="Student Login">
+    <list default="true" id="462f9eb6-cb33-48b7-9317-b4f8f9d845eb" name="Changes" comment="Teachers Login">
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
@@ -14,13 +14,13 @@
       <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Teachers_DashBoard.fxml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/exitadmin.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/Admin_Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/Admin_Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/DB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/new_data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/new_data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Admin_Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Admin_Dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Student_DashBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Student_DashBoard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo1/login1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/login1.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +134,9 @@
       <workItem from="1674496191052" duration="2709000" />
       <workItem from="1674501836506" duration="5397000" />
       <workItem from="1674738013163" duration="1420000" />
+      <workItem from="1674838609484" duration="409000" />
+      <workItem from="1674839937753" duration="1031000" />
+      <workItem from="1674910886261" duration="5253000" />
     </task>
     <task id="LOCAL-00001" summary="Student Login">
       <created>1673171997461</created>
@@ -331,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674508816230</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Teachers Login">
+      <created>1674838671883</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1674838671883</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,6 +361,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Student Login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Student Login" />
+    <MESSAGE value="Teachers Login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Teachers Login" />
   </component>
 </project>
