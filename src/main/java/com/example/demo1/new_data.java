@@ -105,11 +105,11 @@ public class new_data {
         new_data.gender = gender;
     }
 
-    public static BigInteger getBirth_reg() {
+    public static int getBirth_reg() {
         return birth_reg;
     }
 
-    public static void setBirth_reg(BigInteger birth_reg) {
+    public static void setBirth_reg(int birth_reg) {
         new_data.birth_reg = birth_reg;
     }
 
