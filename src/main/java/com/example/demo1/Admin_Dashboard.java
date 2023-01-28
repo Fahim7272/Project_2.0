@@ -4,6 +4,7 @@ import com.mysql.jdbc.PreparedStatement;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,13 +17,17 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.net.URL;
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
 
-public class Admin_Dashboard {
+public class Admin_Dashboard implements Initializable {
 
     @FXML
     private Button Classrooms;
@@ -67,7 +72,7 @@ public class Admin_Dashboard {
     private TextField first_name;
 
     @FXML
-    private TextField gender_in;
+    private ComboBox<?> gender_in;
 
     @FXML
     private Button home;
@@ -137,6 +142,10 @@ public class Admin_Dashboard {
     private Statement statement;
     private PreparedStatement prep;
     private ResultSet res;
+
+    private String _gender[] = {"Male", "Female"};
+
+
 
     public void changeScene(ActionEvent event){
         if(event.getSource() == home){
@@ -268,7 +277,7 @@ public class Admin_Dashboard {
 
             new_data data;
 
-            while(res.next()){
+            while(res.next()) {
                 data = new new_data(res.getInt("ID"),
                         res.getString("classs"),
                         res.getString("section"),
@@ -292,14 +301,61 @@ public class Admin_Dashboard {
                 data_List.addAll(data);
             }
 
-
-
-        }catch(Exception ex){
+        }
+        catch(Exception ex){
 
         }
-
         return data_List;
+    }
+    public void comboBx(){
+        List<String> list = new ArrayList<>();
 
+        //for(String d: _gender){
+            list.add("Male");
+            list.add("Female");
+       // }
+
+        ObservableList datalist = FXCollections.observableArrayList(list);
+        gender_in.setItems(datalist);
+    }
+
+
+    public void insert_data()
+    {
+        connect = DB.connectDb();
+
+        String sql = "INSERT INTO `new_student_data` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+
+            try{
+                prep = (PreparedStatement) connect.prepareStatement(sql);
+
+                prep.setString(1, first_name.getText());
+                prep.setString(1, last_name.getText());
+                prep.setString(1, std_ID_input.getText());
+                prep.setString(1, class_in.getText());
+                prep.setString(1, section_in.getText());
+                prep.setString(1, fathers_name.getText());
+                prep.setString(1, mothers_name.getText());
+                prep.setString(1, birth_date_in.getText());
+                //prep.setString(1, gender_in.getText());
+                prep.setString(1, religion_in.getText());
+                prep.setString(1, blood_grp_in.getText());
+
+
+                prep.executeUpdate();
+
+
+
+
+            }catch (Exception ex){
+
+            }
+
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rs){
+        comboBx();
     }
 
 }

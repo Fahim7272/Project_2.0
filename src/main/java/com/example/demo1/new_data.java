@@ -4,24 +4,24 @@ import java.math.BigInteger;
 
 public class new_data {
 
-    private static Integer id;
-    private static String classs;
-    private static String section;
-    private static String first_name;
-    private static String last_name;
-    private static String fathers_name;
-    private static String mothers_name;
-    private static String birth_date;
-    private static String gender;
-    private static int birth_reg;
-    private static String religion;
-    private static String image;
-    private static String blood_grp;
-    private static int fathers_mobile;
-    private static int mothers_mobile;
-    private static String email;
-    private static String present_address;
-    private static String permanent_address;
+    private  Integer id;
+    private String classs;
+    private String section;
+    private String first_name;
+    private String last_name;
+    private String fathers_name;
+    private String mothers_name;
+    private String birth_date;
+    private String gender;
+    private int birth_reg;
+    private String religion;
+    private String image;
+    private String blood_grp;
+    private int fathers_mobile;
+    private int mothers_mobile;
+    private String email;
+    private String present_address;
+    private String permanent_address;
 
 
     public new_data() {
@@ -49,92 +49,147 @@ public class new_data {
     }
 
 
-    public static Integer getId() {
+    public Integer getId() {
         return id;
     }
 
-    public static void setId(Integer id) {
-        new_data.id = id;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public static String getFirst_name() {
+    public String getClasss() {
+        return classs;
+    }
+
+    public void setClasss(String classs) {
+        this.classs = classs;
+    }
+
+    public String getSection() {
+        return section;
+    }
+
+    public void setSection(String section) {
+        this.section = section;
+    }
+
+    public String getFirst_name() {
         return first_name;
     }
 
-    public static void setFirst_name(String first_name) {
-        new_data.first_name = first_name;
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
 
-    public static String getLast_name() {
+    public String getLast_name() {
         return last_name;
     }
 
-    public static void setLast_name(String last_name) {
-        new_data.last_name = last_name;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
-    public static String getFathers_name() {
+    public String getFathers_name() {
         return fathers_name;
     }
 
-    public static void setFathers_name(String fathers_name) {
-        new_data.fathers_name = fathers_name;
+    public void setFathers_name(String fathers_name) {
+        this.fathers_name = fathers_name;
     }
 
-    public static String getMothers_name() {
+    public String getMothers_name() {
         return mothers_name;
     }
 
-    public static void setMothers_name(String mothers_name) {
-        new_data.mothers_name = mothers_name;
+    public void setMothers_name(String mothers_name) {
+        this.mothers_name = mothers_name;
     }
 
-    public static String getBirth_date() {
+    public String getBirth_date() {
         return birth_date;
     }
 
-    public static void setBirth_date(String birth_date) {
-        new_data.birth_date = birth_date;
+    public void setBirth_date(String birth_date) {
+        this.birth_date = birth_date;
     }
 
-    public static String getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public static void setGender(String gender) {
-        new_data.gender = gender;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public static int getBirth_reg() {
+    public int getBirth_reg() {
         return birth_reg;
     }
 
-    public static void setBirth_reg(int birth_reg) {
-        new_data.birth_reg = birth_reg;
+    public void setBirth_reg(int birth_reg) {
+        this.birth_reg = birth_reg;
     }
 
-    public static String getReligion() {
+    public String getReligion() {
         return religion;
     }
 
-    public static void setReligion(String religion) {
-        new_data.religion = religion;
+    public void setReligion(String religion) {
+        this.religion = religion;
     }
 
-    public static String getImage() {
+    public String getImage() {
         return image;
     }
 
-    public static void setImage(String image) {
-        new_data.image = image;
+    public void setImage(String image) {
+        this.image = image;
     }
 
-    public static String getBlood_grp() {
+    public String getBlood_grp() {
         return blood_grp;
     }
 
-    public static void setBlood_grp(String blood_grp) {
-        new_data.blood_grp = blood_grp;
+    public void setBlood_grp(String blood_grp) {
+        this.blood_grp = blood_grp;
     }
 
+    public int getFathers_mobile() {
+        return fathers_mobile;
+    }
+
+    public void setFathers_mobile(int fathers_mobile) {
+        this.fathers_mobile = fathers_mobile;
+    }
+
+    public int getMothers_mobile() {
+        return mothers_mobile;
+    }
+
+    public void setMothers_mobile(int mothers_mobile) {
+        this.mothers_mobile = mothers_mobile;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPresent_address() {
+        return present_address;
+    }
+
+    public void setPresent_address(String present_address) {
+        this.present_address = present_address;
+    }
+
+    public String getPermanent_address() {
+        return permanent_address;
+    }
+
+    public void setPermanent_address(String permanent_address) {
+        this.permanent_address = permanent_address;
+    }
 }

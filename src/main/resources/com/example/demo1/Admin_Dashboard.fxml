@@ -3,6 +3,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -234,11 +235,6 @@
                </cursor>
             </TextField>
             <Button fx:id="jump_to_contact" layoutX="664.0" layoutY="394.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="28.0" prefWidth="48.0" style="-fx-background-color: #7ed6df;" text="Next" />
-            <TextField fx:id="gender_in" layoutX="546.0" layoutY="207.0" prefHeight="26.0" prefWidth="150.0">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </TextField>
             <Label layoutX="25.0" layoutY="143.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Class: " textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
@@ -259,6 +255,7 @@
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
+            <ComboBox fx:id="gender_in" layoutX="546.0" layoutY="208.0" onAction="#comboBx" prefWidth="150.0" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="contact_info_pane" layoutX="202.0" layoutY="204.0" prefHeight="450.0" prefWidth="744.0" visible="false">
