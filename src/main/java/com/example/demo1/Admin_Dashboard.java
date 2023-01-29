@@ -12,10 +12,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 //import javafx.scene.control.TextField;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
@@ -130,6 +135,8 @@ public class Admin_Dashboard implements Initializable {
 
     @FXML
     private Button update_btn;
+    @FXML
+    private AnchorPane left;
 
 
     @FXML
@@ -287,7 +294,7 @@ public class Admin_Dashboard implements Initializable {
                         res.getString("mothers_name"),
                         res.getString("birth_date"),
                         res.getString("gender"),
-                        res.getInt("birth_reg"),
+                        res.getString("birth_reg"),
                         res.getString("religion"),
                         res.getString("image"),
                         res.getString("blood_grp"),
@@ -307,13 +314,33 @@ public class Admin_Dashboard implements Initializable {
         }
         return data_List;
     }
+
+
+
+    public void insertImage() {
+
+        FileChooser op = new FileChooser();
+        Stage stage = (Stage)left.getScene().getWindow();
+        File file = op.showOpenDialog(stage);
+
+        if(file != null){
+
+            Image im;
+
+        }
+
+    }
+
+
+
+
+
     public void comboBx(){
         List<String> list = new ArrayList<>();
 
-        //for(String d: _gender){
-            list.add("Male");
-            list.add("Female");
-       // }
+        for(String d: _gender){
+            list.add(d);
+       }
 
         ObservableList datalist = FXCollections.observableArrayList(list);
         gender_in.setItems(datalist);

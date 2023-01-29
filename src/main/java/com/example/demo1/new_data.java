@@ -13,7 +13,7 @@ public class new_data {
     private String mothers_name;
     private String birth_date;
     private String gender;
-    private int birth_reg;
+    private String birth_reg;
     private String religion;
     private String image;
     private String blood_grp;
@@ -27,7 +27,7 @@ public class new_data {
     public new_data() {
     }
 
-    public new_data(Integer id, String classs, String section, String first_name, String last_name, String fathers_name, String mothers_name, String birth_date, String gender, int birth_reg, String religion, String image, String blood_grp, int fathers_mobile, int mothers_mobile, String email, String present_address, String permanent_address) {
+    public new_data(Integer id, String classs, String section, String first_name, String last_name, String fathers_name, String mothers_name, String birth_date, String gender, String birth_reg, String religion, String image, String blood_grp, int fathers_mobile, int mothers_mobile, String email, String present_address, String permanent_address) {
         this.id = id;
         this.classs = classs;
         this.section = section;
@@ -121,11 +121,11 @@ public class new_data {
         this.gender = gender;
     }
 
-    public int getBirth_reg() {
+    public String getBirth_reg() {
         return birth_reg;
     }
 
-    public void setBirth_reg(int birth_reg) {
+    public void setBirth_reg(String birth_reg) {
         this.birth_reg = birth_reg;
     }
 

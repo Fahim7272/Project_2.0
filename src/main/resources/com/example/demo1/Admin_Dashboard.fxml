@@ -20,7 +20,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="950.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.Admin_Dashboard">
     <children>
-        <AnchorPane prefHeight="652.0" prefWidth="202.0" style="-fx-background-color: #7ed6df;">
+        <AnchorPane fx:id="left" prefHeight="652.0" prefWidth="202.0" style="-fx-background-color: #7ed6df;">
             <children>
                 <Text layoutX="52.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!">
                     <font>
