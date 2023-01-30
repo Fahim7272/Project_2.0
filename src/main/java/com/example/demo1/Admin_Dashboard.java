@@ -27,6 +27,8 @@ import java.sql.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -325,8 +327,8 @@ public class Admin_Dashboard implements Initializable {
 
         if(file != null){
 
-            Image im;
-
+            Image image;
+            insertImage();
         }
 
     }
@@ -349,7 +351,14 @@ public class Admin_Dashboard implements Initializable {
 
     public void insert_data()
     {
+
+
+        Date date = null;
+        DateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+        String dtform = format.format(date);
+
         connect = DB.connectDb();
+
 
         String sql = "INSERT INTO `new_student_data` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
 
@@ -363,7 +372,7 @@ public class Admin_Dashboard implements Initializable {
                 prep.setString(1, section_in.getText());
                 prep.setString(1, fathers_name.getText());
                 prep.setString(1, mothers_name.getText());
-                prep.setString(1, birth_date_in.getText());
+                prep.setString(1, dtform);
                 //prep.setString(1, gender_in.getText());
                 prep.setString(1, religion_in.getText());
                 prep.setString(1, blood_grp_in.getText());
@@ -379,6 +388,35 @@ public class Admin_Dashboard implements Initializable {
             }
 
     }
+
+
+    public void showData() {
+        connect = DB.connectDb();
+        String sql = "SELECT * FROM new_student_data";
+
+        try {
+            prep = (PreparedStatement) connect.prepareStatement(sql);
+            ResultSet result = prep.executeQuery();
+
+            while (result.next()) {
+                first_name.setText(result.getString("first_name"));
+                last_name.setText(result.getString("last_name"));
+                std_ID_input.setText(result.getString("student_ID"));
+                class_in.setText(result.getString("class"));
+                section_in.setText(result.getString("section"));
+                fathers_name.setText(result.getString("fathers_name"));
+                mothers_name.setText(result.getString("mothers_name"));
+                //date_of_birth.setText(result.getString("date_of_birth"));
+                //gender_in.setText(result.getString("gender"));
+                religion_in.setText(result.getString("religion"));
+                blood_grp_in.setText(result.getString("blood_group"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle rs){
