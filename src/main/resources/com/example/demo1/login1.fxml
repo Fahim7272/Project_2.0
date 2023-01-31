@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.PasswordField?>
@@ -13,7 +14,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
    <children>
-      <BorderPane fx:id="login_student" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0">
+      <BorderPane fx:id="login_student" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0" visible="false">
          <left>
             <AnchorPane prefHeight="506.0" prefWidth="370.0" style="-fx-background-color: #7ed6df;" BorderPane.alignment="CENTER">
                <children>
@@ -41,33 +42,41 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <TextField fx:id="ID" layoutX="133.0" layoutY="208.0" prefHeight="26.0" prefWidth="170.0" promptText="ID" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
-                  <PasswordField fx:id="password" layoutX="132.0" layoutY="265.0" prefHeight="26.0" prefWidth="170.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
+                  <TextField fx:id="ID" layoutX="131.0" layoutY="215.0" prefHeight="26.0" prefWidth="170.0" promptText="ID" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
+                  <PasswordField fx:id="password" layoutX="130.0" layoutY="272.0" prefHeight="26.0" prefWidth="170.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
       
-                  <Button fx:id="login_button" layoutX="188.0" layoutY="326.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #7ed6df;" text="Login" textFill="#000000b0" />
+                  <Button fx:id="login_button" layoutX="186.0" layoutY="333.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #7ed6df;" text="Login" textFill="#000000b0" />
       
-                  <Text fill="#7ed6df" layoutX="144.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT LOGIN">
+                  <Text fill="#7ed6df" layoutX="142.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT LOGIN">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="95.0" fitWidth="110.0" layoutX="156.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="95.0" fitWidth="110.0" layoutX="154.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@users.PNG" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="90.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="88.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@user.PNG" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="89.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="87.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@key.PNG" />
                      </image>
                   </ImageView>
-                  <Hyperlink fx:id="admin_login" layoutX="172.0" layoutY="465.0" onAction="#changeScene" text="Admin Login" textFill="#28747b">
+                  <Hyperlink fx:id="admin_login" layoutX="303.0" layoutY="466.0" onAction="#changeScene" text="Admin Login" textFill="#28747b">
+                     <font>
+                        <Font size="12.5" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink layoutX="14.0" layoutY="466.0" text="Teachers Login" textFill="#28747b">
                      <font>
                         <Font size="12.5" />
                      </font>
@@ -76,7 +85,7 @@
             </AnchorPane>
          </center>
       </BorderPane>
-      <BorderPane fx:id="login_admin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0" visible="false">
+      <BorderPane fx:id="login_admin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0">
          <center>
             <AnchorPane prefHeight="506.0" prefWidth="364.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
                <children>
@@ -112,7 +121,78 @@
                         <Image url="@key.PNG" />
                      </image>
                   </ImageView>
-                  <Hyperlink fx:id="student_login" layoutX="152.0" layoutY="465.0" onAction="#changeScene" text="Student Login" textFill="#28747b">
+                  <Hyperlink fx:id="student_login" layoutX="286.0" layoutY="471.0" onAction="#changeScene" text="Student Login" textFill="#28747b">
+                     <font>
+                        <Font size="12.5" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="student_login1" layoutX="14.0" layoutY="471.0" onAction="#changeScene" text="Teachers Login" textFill="#28747b">
+                     <font>
+                        <Font size="12.5" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+         </center>
+         <right>
+            <AnchorPane prefHeight="506.0" prefWidth="380.0" style="-fx-background-color: #7ed6df;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="123.0" fitWidth="161.0" layoutX="112.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@hat.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#535c68" layoutX="123.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wittens School" wrappingWidth="153.33669662475586">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+      <BorderPane fx:id="login_admin1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0">
+         <center>
+            <AnchorPane prefHeight="506.0" prefWidth="364.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="exit11" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#exit1" prefHeight="26.0" prefWidth="31.0" style="-fx-background-color: #FFFFFF;" text="Button" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@exit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="ID11" layoutX="118.0" layoutY="209.0" prefHeight="26.0" prefWidth="170.0" promptText="ID" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
+                  <PasswordField fx:id="password11" layoutX="117.0" layoutY="266.0" prefHeight="26.0" prefWidth="170.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
+                  <Button fx:id="login_button11" layoutX="173.0" layoutY="325.0" mnemonicParsing="false" onAction="#login_admin" style="-fx-background-color: #7ed6df;" text="Login" textFill="#000000b0" />
+                  <Text fill="#7ed6df" layoutX="128.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEACHERS LOGIN">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="95.0" fitWidth="99.0" layoutX="154.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.PNG" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="75.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.PNG" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="74.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@key.PNG" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="student_login1" layoutX="286.0" layoutY="471.0" onAction="#changeScene" text="Student Login" textFill="#28747b">
+                     <font>
+                        <Font size="12.5" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink fx:id="student_login11" layoutX="14.0" layoutY="471.0" onAction="#changeScene" text="Teachers Login" textFill="#28747b">
                      <font>
                         <Font size="12.5" />
                      </font>
