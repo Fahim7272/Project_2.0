@@ -387,10 +387,6 @@ public class Admin_Dashboard implements Initializable {
 
     public void insert_data()
     {
-        Date date = null;
-        DateFormat format = new SimpleDateFormat("yyyy-mm-dd");
-        String dtform = format.format(date);
-
         connect = DB.connectDb();
 
         String sql = "INSERT INTO `new_student_data`(`First_name`, `Last_name`, `ID`, `Fathers_name`, `Mothers name`, `Birth_date`, `Gender`, `Religion`, `Blood Group`) VALUES (?,?,?,?,?,?,?,?,?)";
@@ -400,7 +396,7 @@ public class Admin_Dashboard implements Initializable {
 
                 prep.setString(1, first_name.getText());
                 prep.setString(2, last_name.getText());
-                prep.setString(3, std_ID_input.getText());
+                prep.setString(3, std_ID_input.getAccessibleText());
                 prep.setString(4, fathers_name.getText());
                 prep.setString(5, mothers_name.getText());
                 prep.setString(6, birth_date_inn.getAccessibleText());
