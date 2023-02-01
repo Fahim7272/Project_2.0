@@ -27,7 +27,16 @@ public class HelloController {
         private TextField ID1;
 
         @FXML
+        private TextField ID11;
+
+        @FXML
+        private Hyperlink Teachers_login_from_std;
+
+        @FXML
         private Hyperlink admin_login;
+
+        @FXML
+        private Hyperlink admin_login_from_teacher;
 
         @FXML
         private Button exit;
@@ -36,13 +45,22 @@ public class HelloController {
         private Button exit1;
 
         @FXML
+        private Button exit11;
+
+        @FXML
         private BorderPane login_admin;
+
+        @FXML
+        private BorderPane login_admin1;
 
         @FXML
         private Button login_button;
 
         @FXML
         private Button login_button1;
+
+        @FXML
+        private Button login_button11;
 
         @FXML
         private BorderPane login_student;
@@ -54,7 +72,16 @@ public class HelloController {
         private PasswordField password1;
 
         @FXML
-        private Hyperlink student_login;
+        private PasswordField password11;
+
+        @FXML
+        private Hyperlink student_login2;
+
+        @FXML
+        private Hyperlink student_login_from_teacher;
+
+        @FXML
+        private Hyperlink teachers_login;
 
         private Connection connect;
         private Statement statement;
@@ -151,16 +178,24 @@ public class HelloController {
 
         public void changeScene(ActionEvent event){
 
-                if(event.getSource() == student_login){
+                if(event.getSource() == student_login2 || event.getSource() == student_login_from_teacher){
                         login_student.setVisible(true);
                         login_admin.setVisible(false);
-
+                        login_admin1.setVisible(false);
                         ID1.setText("");
                         password1.setText("");
                 }
 
-                else if(event.getSource() == admin_login){
+                else if(event.getSource() == admin_login || event.getSource() == admin_login_from_teacher){
                         login_admin.setVisible(true);
+                        login_admin1.setVisible(false);
+                        login_student.setVisible(false);
+
+                        ID.setText("");
+                        password.setText("");
+                } else if (event.getSource() == teachers_login || event.getSource() == Teachers_login_from_std) {
+                        login_admin.setVisible(false);
+                        login_admin1.setVisible(true);
                         login_student.setVisible(false);
 
                         ID.setText("");

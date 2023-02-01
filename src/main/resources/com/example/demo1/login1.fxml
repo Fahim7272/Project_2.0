@@ -76,7 +76,7 @@
                         <Font size="12.5" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink layoutX="14.0" layoutY="466.0" text="Teachers Login" textFill="#28747b">
+                  <Hyperlink fx:id="Teachers_login_from_std" layoutX="14.0" layoutY="466.0" onAction="#changeScene" text="Teachers Login" textFill="#28747b">
                      <font>
                         <Font size="12.5" />
                      </font>
@@ -85,7 +85,7 @@
             </AnchorPane>
          </center>
       </BorderPane>
-      <BorderPane fx:id="login_admin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0">
+      <BorderPane fx:id="login_admin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0" visible="false">
          <center>
             <AnchorPane prefHeight="506.0" prefWidth="364.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
                <children>
@@ -121,12 +121,12 @@
                         <Image url="@key.PNG" />
                      </image>
                   </ImageView>
-                  <Hyperlink fx:id="student_login" layoutX="286.0" layoutY="471.0" onAction="#changeScene" text="Student Login" textFill="#28747b">
+                  <Hyperlink fx:id="student_login2" layoutX="286.0" layoutY="471.0" onAction="#changeScene" text="Student Login" textFill="#28747b">
                      <font>
                         <Font size="12.5" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink fx:id="student_login1" layoutX="14.0" layoutY="471.0" onAction="#changeScene" text="Teachers Login" textFill="#28747b">
+                  <Hyperlink fx:id="teachers_login" layoutX="14.0" layoutY="471.0" onAction="#changeScene" text="Teachers Login" textFill="#28747b">
                      <font>
                         <Font size="12.5" />
                      </font>
@@ -187,12 +187,12 @@
                         <Image url="@key.PNG" />
                      </image>
                   </ImageView>
-                  <Hyperlink fx:id="student_login1" layoutX="286.0" layoutY="471.0" onAction="#changeScene" text="Student Login" textFill="#28747b">
+                  <Hyperlink fx:id="student_login_from_teacher" layoutX="286.0" layoutY="471.0" onAction="#changeScene" text="Student Login" textFill="#28747b">
                      <font>
                         <Font size="12.5" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink fx:id="student_login11" layoutX="14.0" layoutY="471.0" onAction="#changeScene" text="Teachers Login" textFill="#28747b">
+                  <Hyperlink fx:id="admin_login_from_teacher" layoutX="14.0" layoutY="471.0" onAction="#changeScene" text="Admin Login" textFill="#28747b">
                      <font>
                         <Font size="12.5" />
                      </font>

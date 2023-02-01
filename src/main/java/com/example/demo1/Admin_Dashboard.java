@@ -169,7 +169,7 @@ public class Admin_Dashboard implements Initializable {
     private PreparedStatement prep;
     private ResultSet res;
 
-    private String _gender[] = {"Male", "Female"};
+
     private int _class[] = {1,2,3,4,5,6,7,8,9,10};
     private String section[] = {"A", "B"};
 
@@ -358,8 +358,7 @@ public class Admin_Dashboard implements Initializable {
 
 
 
-
-
+    private String _gender[] = {"Male", "Female"};
     public void comboBx(){
         List<String> list = new ArrayList<>();
 
@@ -391,8 +390,6 @@ public class Admin_Dashboard implements Initializable {
                 prep.setString(1, first_name.getText());
                 prep.setString(1, last_name.getText());
                 prep.setString(1, std_ID_input.getText());
-                prep.setString(1, class_in.getText());
-                prep.setString(1, section_in.getText());
                 prep.setString(1, fathers_name.getText());
                 prep.setString(1, mothers_name.getText());
                 prep.setString(1, dtform);
@@ -425,8 +422,6 @@ public class Admin_Dashboard implements Initializable {
                 first_name.setText(result.getString("first_name"));
                 last_name.setText(result.getString("last_name"));
                 std_ID_input.setText(result.getString("student_ID"));
-                class_in.setText(result.getString("class"));
-                section_in.setText(result.getString("section"));
                 fathers_name.setText(result.getString("fathers_name"));
                 mothers_name.setText(result.getString("mothers_name"));
                 //date_of_birth.setText(result.getString("date_of_birth"));
