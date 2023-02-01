@@ -2,7 +2,6 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -120,35 +119,29 @@
          <children>
             <Pane prefHeight="438.0" prefWidth="744.0" style="-fx-background-color: #ffffff;">
                <children>
-                  <TextArea layoutX="88.0" layoutY="65.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text=" Total Students:">
+                  <TextArea editable="false" layoutX="258.0" layoutY="66.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text=" Total Students:">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </TextArea>
-                  <TextArea layoutX="88.0" layoutY="249.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text="   Total Staffs:">
+                  <TextArea editable="false" layoutX="406.0" layoutY="249.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text="   Total Staffs:">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </TextArea>
-                  <TextArea layoutX="388.0" layoutY="65.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text=" Total Teachers:">
+                  <TextArea editable="false" layoutX="115.0" layoutY="249.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text=" Total Teachers:">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </TextArea>
-                  <TextArea layoutX="388.0" layoutY="249.0" prefHeight="110.0" prefWidth="218.0" style="-fx-background-color: #7ed6df;" text="   Total Staffs:">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </TextArea>
-                  <Label layoutX="144.0" layoutY="304.0" prefHeight="33.0" prefWidth="70.0" text="Label" />
                   <Label layoutX="462.0" layoutY="304.0" prefHeight="33.0" prefWidth="70.0" text="Label" />
-                  <Label layoutX="462.0" layoutY="120.0" prefHeight="33.0" prefWidth="70.0" text="Label" />
-                  <Label layoutX="170.0" layoutY="122.0" prefHeight="33.0" prefWidth="70.0" text="Label" />
+                  <Label layoutX="189.0" layoutY="304.0" prefHeight="33.0" prefWidth="70.0" text="Label" />
+                  <Label layoutX="334.0" layoutY="123.0" prefHeight="33.0" prefWidth="70.0" text="Label" />
                </children>
             </Pane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="new_student_pane" layoutX="204.0" layoutY="204.0" prefHeight="445.0" prefWidth="750.0" visible="false">
+      <AnchorPane fx:id="new_student_pane" layoutX="204.0" layoutY="204.0" prefHeight="445.0" prefWidth="750.0">
          <children>
             <Label layoutX="25.0" layoutY="109.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Student ID:" textAlignment="CENTER">
                <font>
@@ -230,7 +223,7 @@
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <Button fx:id="jump_to_contact" layoutX="664.0" layoutY="394.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="28.0" prefWidth="48.0" style="-fx-background-color: #7ed6df;" text="Next" />
+            <Button fx:id="jump_to_contact" layoutX="664.0" layoutY="401.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="28.0" prefWidth="48.0" style="-fx-background-color: #7ed6df;" text="Next" />
             <Label layoutX="25.0" layoutY="143.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Class: " textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
@@ -253,6 +246,7 @@
             </TextField>
             <ComboBox fx:id="gender_in" layoutX="546.0" layoutY="208.0" onAction="#comboBx" prefWidth="150.0" />
             <DatePicker fx:id="birth_date_inn" layoutX="159.0" layoutY="280.0" prefHeight="26.0" prefWidth="243.0" />
+            <Button fx:id="save_gen" layoutX="14.0" layoutY="401.0" mnemonicParsing="false" onAction="#insert_data" prefHeight="26.0" prefWidth="49.0" style="-fx-background-color: #7ed6df;" text="Save" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="contact_info_pane" layoutX="202.0" layoutY="204.0" prefHeight="450.0" prefWidth="744.0" visible="false">
@@ -317,13 +311,11 @@
          <children>
             <AnchorPane fx:id="class_routine_selection_pane" layoutY="94.0" prefHeight="354.0" prefWidth="744.0">
                <children>
-                  <ChoiceBox layoutX="309.0" layoutY="98.0" prefWidth="150.0" />
                   <Label layoutX="213.0" layoutY="37.0" text="Class: ">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <ChoiceBox layoutX="309.0" layoutY="38.0" prefWidth="150.0" />
                   <Label layoutX="212.0" layoutY="97.0" text="Section: ">
                      <font>
                         <Font size="18.0" />
@@ -351,6 +343,8 @@
                         <TableColumn prefWidth="139.199951171875" />
                      </columns>
                   </TableView>
+                  <ComboBox fx:id="routine_class_picker" layoutX="298.0" layoutY="37.0" onAction="#comboBx2" prefWidth="150.0" />
+                  <ComboBox fx:id="routine_section_picker" layoutX="298.0" layoutY="98.0" onAction="#comboBx3" prefWidth="150.0" />
                </children>
             </AnchorPane>
          </children>
@@ -362,13 +356,11 @@
                   <Font name="System Bold Italic" size="25.0" />
                </font>
             </Label>
-            <ChoiceBox fx:id="student_info_section_selector" layoutX="300.0" layoutY="214.0" prefWidth="150.0" />
             <Label layoutX="224.0" layoutY="144.0" text="Class: ">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <ChoiceBox fx:id="student_info_class_selector" layoutX="300.0" layoutY="145.0" prefWidth="150.0" />
             <Label layoutX="211.0" layoutY="213.0" text="Section: ">
                <font>
                   <Font size="18.0" />
@@ -379,9 +371,11 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <ComboBox fx:id="student_info_class_selector" layoutX="299.0" layoutY="145.0" onAction="#comboBx2" prefWidth="150.0" />
+            <ComboBox fx:id="student_info_section_selector" layoutX="300.0" layoutY="212.0" onAction="#comboBx3" prefWidth="150.0" />
          </children>
       </AnchorPane>
-      <ScrollPane fx:id="student_info_pane" layoutX="203.0" layoutY="299.0" prefHeight="427.0" prefWidth="750.0">
+      <ScrollPane fx:id="student_info_pane" layoutX="203.0" layoutY="209.0" prefHeight="458.0" prefWidth="750.0" visible="false">
          <content>
             <TableView prefHeight="583.0" prefWidth="746.0">
                <columns>
@@ -392,14 +386,5 @@
             </TableView>
          </content>
       </ScrollPane>
-      <AnchorPane layoutX="466.0" layoutY="223.0" prefHeight="48.0" prefWidth="200.0">
-         <children>
-            <Label text="Student Info">
-               <font>
-                  <Font name="System Bold Italic" size="25.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
     </children>
 </AnchorPane>

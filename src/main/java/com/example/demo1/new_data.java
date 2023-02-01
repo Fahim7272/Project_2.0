@@ -27,10 +27,8 @@ public class new_data {
     public new_data() {
     }
 
-    public new_data(Integer id, String classs, String section, String first_name, String last_name, String fathers_name, String mothers_name, String birth_date, String gender, String birth_reg, String religion, String image, String blood_grp, int fathers_mobile, int mothers_mobile, String email, String present_address, String permanent_address) {
+    public new_data(Integer id, String first_name, String last_name, String fathers_name, String mothers_name, String birth_date, String gender, String birth_reg, String religion, String image, String blood_grp, int fathers_mobile, int mothers_mobile, String email, String present_address, String permanent_address) {
         this.id = id;
-        this.classs = classs;
-        this.section = section;
         this.first_name = first_name;
         this.last_name = last_name;
         this.fathers_name = fathers_name;

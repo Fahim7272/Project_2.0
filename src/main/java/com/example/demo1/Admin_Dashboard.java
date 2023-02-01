@@ -131,6 +131,15 @@ public class Admin_Dashboard implements Initializable {
     private TextField religion_in;
 
     @FXML
+    private ComboBox<?> routine_class_picker;
+
+    @FXML
+    private ComboBox<?> routine_section_picker;
+
+    @FXML
+    private Button save_gen;
+
+    @FXML
     private Button save_new_data;
 
     @FXML
@@ -140,7 +149,7 @@ public class Admin_Dashboard implements Initializable {
     private TextField std_ID_input;
 
     @FXML
-    private ChoiceBox<?> student_info_class_selector;
+    private ComboBox<?> student_info_class_selector;
 
     @FXML
     private ScrollPane student_info_pane;
@@ -149,12 +158,10 @@ public class Admin_Dashboard implements Initializable {
     private Button student_info_proceed_btn1;
 
     @FXML
-    private ChoiceBox<?> student_info_section_selector;
+    private ComboBox<?> student_info_section_selector;
 
     @FXML
     private AnchorPane student_info_selection;
-    @FXML
-    private AnchorPane label_only_pane;
 
 
 
@@ -163,17 +170,10 @@ public class Admin_Dashboard implements Initializable {
         System.exit(0);
     }
 
-
     private Connection connect;
     private Statement statement;
     private PreparedStatement prep;
     private ResultSet res;
-
-
-    private int _class[] = {1,2,3,4,5,6,7,8,9,10};
-    private String section[] = {"A", "B"};
-
-
 
     public void changeScene(ActionEvent event){
         if(event.getSource() == home){
@@ -185,7 +185,6 @@ public class Admin_Dashboard implements Initializable {
             student_info_pane.setVisible(false);
             student_info_selection.setVisible(false);
             class_routine_pane.setVisible(false);
-            label_only_pane.setVisible(false);
         }
         else if(event.getSource() == new_student_data){
             new_student_pane.setVisible(true);
@@ -196,7 +195,6 @@ public class Admin_Dashboard implements Initializable {
             student_info_pane.setVisible(false);
             student_info_selection.setVisible(false);
             class_routine_pane.setVisible(false);
-            label_only_pane.setVisible(false);
         }
         else if(event.getSource() == Post_announce){
             announce_pane.setVisible(true);
@@ -207,11 +205,11 @@ public class Admin_Dashboard implements Initializable {
             student_info_pane.setVisible(false);
             student_info_selection.setVisible(false);
             class_routine_pane.setVisible(false);
-            label_only_pane.setVisible(false);
         }
 
         else if(event.getSource() == back_to_new_info || event.getSource() == General_info_insert){
             new_student_pane.setVisible(true);
+
             contact_info_pane.setVisible(false);
             announce_pane.setVisible(false);
             General_info_pane.setVisible(true);
@@ -219,18 +217,16 @@ public class Admin_Dashboard implements Initializable {
             student_info_pane.setVisible(false);
             student_info_selection.setVisible(false);
             class_routine_pane.setVisible(false);
-            label_only_pane.setVisible(false);
         }
         else if(event.getSource() == jump_to_contact || event.getSource() == Contact_info_insert){
             contact_info_pane.setVisible(true);
             new_student_pane.setVisible(false);
             announce_pane.setVisible(false);
-            General_info_pane.setVisible(true);
+            General_info_pane.setVisible(false);
             home_pane.setVisible(false);
             student_info_pane.setVisible(false);
             student_info_selection.setVisible(false);
             class_routine_pane.setVisible(false);
-            label_only_pane.setVisible(false);
         }
         else if(event.getSource() == save_new_data){
             new_student_pane.setVisible(true);
@@ -241,7 +237,6 @@ public class Admin_Dashboard implements Initializable {
             student_info_pane.setVisible(false);
             student_info_selection.setVisible(false);
             class_routine_pane.setVisible(false);
-            label_only_pane.setVisible(false);
         }
 
         else if(event.getSource() == Classrooms){
@@ -253,7 +248,6 @@ public class Admin_Dashboard implements Initializable {
             General_info_pane.setVisible(false);
             home_pane.setVisible(false);
             student_info_selection.setVisible(false);
-            label_only_pane.setVisible(false);
         }
         else if(event.getSource() == student_info_proceed_btn1){
             new_student_pane.setVisible(false);
@@ -264,11 +258,9 @@ public class Admin_Dashboard implements Initializable {
             General_info_pane.setVisible(false);
             home_pane.setVisible(false);
             class_routine_pane.setVisible(false);
-            label_only_pane.setVisible(false);
         }
         else if(event.getSource() == All_Student_info){
             student_info_selection.setVisible(true);
-            label_only_pane.setVisible(true);
             new_student_pane.setVisible(false);
             student_info_pane.setVisible(false);
             contact_info_pane.setVisible(false);
@@ -277,9 +269,6 @@ public class Admin_Dashboard implements Initializable {
             home_pane.setVisible(false);
             class_routine_pane.setVisible(false);
         }
-
-
-
 
     }
 
@@ -310,9 +299,8 @@ public class Admin_Dashboard implements Initializable {
             new_data data;
 
             while(res.next()) {
-                data = new new_data(res.getInt("ID"),
-                        res.getString("classs"),
-                        res.getString("section"),
+                data = new new_data(
+                        res.getInt("ID"),
                         res.getString("first_name"),
                         res.getString("last_name"),
                         res.getString("fathers_name"),
@@ -371,37 +359,56 @@ public class Admin_Dashboard implements Initializable {
     }
 
 
+    private String _class[] = {"1","2","3","4","5","6","7","8","9","10"};
+    private String section[] = {"A","B"};
+    public void comboBx2(){
+        List<String> list = new ArrayList<>();
+
+        for(String d: _class){
+            list.add(d);
+        }
+
+        ObservableList datalist = FXCollections.observableArrayList(list);
+        student_info_class_selector.setItems(datalist);
+        routine_class_picker.setItems(datalist);
+    }
+
+    public void comboBx3(){
+        List<String> list = new ArrayList<>();
+
+        for(String d: section){
+            list.add(d);
+        }
+
+        ObservableList datalist = FXCollections.observableArrayList(list);
+        student_info_section_selector.setItems(datalist);
+        routine_section_picker.setItems(datalist);
+    }
+
     public void insert_data()
     {
-
-
         Date date = null;
         DateFormat format = new SimpleDateFormat("yyyy-mm-dd");
         String dtform = format.format(date);
 
         connect = DB.connectDb();
 
-
-        String sql = "INSERT INTO `new_student_data` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO `new_student_data`(`First_name`, `Last_name`, `ID`, `Fathers_name`, `Mothers name`, `Birth_date`, `Gender`, `Religion`, `Blood Group`) VALUES (?,?,?,?,?,?,?,?,?)";
 
             try{
                 prep = (PreparedStatement) connect.prepareStatement(sql);
 
                 prep.setString(1, first_name.getText());
-                prep.setString(1, last_name.getText());
-                prep.setString(1, std_ID_input.getText());
-                prep.setString(1, fathers_name.getText());
-                prep.setString(1, mothers_name.getText());
-                prep.setString(1, dtform);
-                //prep.setString(1, gender_in.getText());
-                prep.setString(1, religion_in.getText());
-                prep.setString(1, blood_grp_in.getText());
-
+                prep.setString(2, last_name.getText());
+                prep.setString(3, std_ID_input.getText());
+                prep.setString(4, fathers_name.getText());
+                prep.setString(5, mothers_name.getText());
+                prep.setString(6, birth_date_inn.getAccessibleText());
+                prep.setString(7, gender_in.getAccessibleText());
+                prep.setString(8, religion_in.getText());
+                prep.setString(9, blood_grp_in.getText());
 
                 prep.executeUpdate();
-
-
-
 
             }catch (Exception ex){
 
@@ -439,6 +446,8 @@ public class Admin_Dashboard implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rs){
         comboBx();
+        comboBx2();
+        comboBx3();
     }
 
 }
