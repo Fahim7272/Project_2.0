@@ -4,6 +4,8 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -29,7 +31,7 @@
                         <Font size="25.0" />
                     </font>
                 </Text>
-                <Button fx:id="teachers_home" layoutX="35.0" layoutY="268.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Home">
+                <Button fx:id="teacher_home" layoutX="35.0" layoutY="268.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Home">
                     <font>
                         <Font size="12.5" />
                     </font>
@@ -81,33 +83,27 @@
                 </ImageView>
             </children>
         </AnchorPane>
-      <ScrollPane layoutX="201.0" layoutY="191.0" visible="false">
+      <ScrollPane layoutX="201.0" layoutY="191.0" prefHeight="462.0" prefWidth="752.0" visible="false">
          <content>
-            <AnchorPane prefHeight="1000.0" prefWidth="750.0" />
+            <AnchorPane prefHeight="1000.0" prefWidth="750.0">
+               <children>
+                  <TableView prefHeight="1032.0" prefWidth="752.0">
+                    <columns>
+                      <TableColumn prefWidth="109.6000183224678" text="C1" />
+                      <TableColumn prefWidth="93.5999755859375" text="C2" />
+                        <TableColumn prefWidth="62.40003967285156" text="Column X" />
+                        <TableColumn prefWidth="80.79998779296875" text="Column X" />
+                        <TableColumn text="Column X" />
+                        <TableColumn prefWidth="78.39996337890625" text="Column X" />
+                        <TableColumn prefWidth="83.20001220703125" text="Column X" />
+                        <TableColumn prefWidth="60.0" text="Column X" />
+                        <TableColumn prefWidth="68.7999267578125" text="Column X" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
          </content>
       </ScrollPane>
-      <AnchorPane layoutX="201.0" layoutY="191.0" prefHeight="462.0" prefWidth="752.0">
-         <children>
-            <Label layoutX="290.0" layoutY="56.0" text="Update Result">
-               <font>
-                  <Font name="System Bold Italic" size="26.0" />
-               </font>
-            </Label>
-            <ChoiceBox fx:id="classes" layoutX="301.0" layoutY="144.0" prefWidth="150.0" />
-            <ChoiceBox fx:id="section" layoutX="301.0" layoutY="205.0" prefWidth="150.0" />
-            <Button fx:id="Upd_res_proceed" layoutX="650.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #7ed6df;" text="Proceed" />
-            <Label layoutX="233.0" layoutY="147.0" text="Class: ">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
-            <Label layoutX="239.0" layoutY="209.0" text="Section: ">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
       <AnchorPane layoutX="198.0" layoutY="191.0" prefHeight="462.0" prefWidth="752.0" visible="false">
          <children>
             <Label layoutX="259.0" layoutY="56.0" text="Post Announcement">
@@ -124,6 +120,28 @@
                </font>
             </Label>
             <Label layoutX="221.0" layoutY="207.0" text="Section: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="201.0" layoutY="191.0" prefHeight="462.0" prefWidth="752.0" visible="false">
+         <children>
+            <Label layoutX="290.0" layoutY="56.0" text="Update Result">
+               <font>
+                  <Font name="System Bold Italic" size="26.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="Upd_res_class" layoutX="301.0" layoutY="144.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="Upd_res_section" layoutX="301.0" layoutY="205.0" prefWidth="150.0" />
+            <Button fx:id="Upd_res_proceed" layoutX="650.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #7ed6df;" text="Proceed" />
+            <Label layoutX="233.0" layoutY="147.0" text="Class: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="219.0" layoutY="207.0" text="Section: ">
                <font>
                   <Font size="15.0" />
                </font>
