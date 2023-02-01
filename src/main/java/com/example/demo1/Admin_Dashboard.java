@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 //import javafx.scene.control.TextField;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -37,6 +38,9 @@ import java.util.ResourceBundle;
 public class Admin_Dashboard implements Initializable {
 
     @FXML
+    private Button All_Student_info;
+
+    @FXML
     private Button Classrooms;
 
     @FXML
@@ -49,9 +53,6 @@ public class Admin_Dashboard implements Initializable {
     private AnchorPane General_info_pane;
 
     @FXML
-    private Button Next_page_result;
-
-    @FXML
     private Button Post_announce;
 
     @FXML
@@ -61,13 +62,25 @@ public class Admin_Dashboard implements Initializable {
     private Button back_to_new_info;
 
     @FXML
-    private TextField birth_date_in;
+    private DatePicker birth_date_inn;
 
     @FXML
     private TextField blood_grp_in;
 
     @FXML
     private TextField class_in;
+
+    @FXML
+    private AnchorPane class_routine_pane;
+
+    @FXML
+    private Button class_routine_proceed_btn;
+
+    @FXML
+    private AnchorPane class_routine_see_pane;
+
+    @FXML
+    private AnchorPane class_routine_selection_pane;
 
     @FXML
     private AnchorPane contact_info_pane;
@@ -94,6 +107,9 @@ public class Admin_Dashboard implements Initializable {
     private TextField last_name;
 
     @FXML
+    private AnchorPane left;
+
+    @FXML
     private Button log_out;
 
     @FXML
@@ -115,18 +131,6 @@ public class Admin_Dashboard implements Initializable {
     private TextField religion_in;
 
     @FXML
-    private Button result_update;
-
-    @FXML
-    private AnchorPane result_update_pane;
-
-    @FXML
-    private AnchorPane result_update_pane1;
-
-    @FXML
-    private AnchorPane result_update_pane2;
-
-    @FXML
     private Button save_new_data;
 
     @FXML
@@ -136,9 +140,22 @@ public class Admin_Dashboard implements Initializable {
     private TextField std_ID_input;
 
     @FXML
-    private Button update_btn;
+    private ChoiceBox<?> student_info_class_selector;
+
     @FXML
-    private AnchorPane left;
+    private ScrollPane student_info_pane;
+
+    @FXML
+    private Button student_info_proceed_btn1;
+
+    @FXML
+    private ChoiceBox<?> student_info_section_selector;
+
+    @FXML
+    private AnchorPane student_info_selection;
+    @FXML
+    private AnchorPane label_only_pane;
+
 
 
     @FXML
@@ -153,6 +170,8 @@ public class Admin_Dashboard implements Initializable {
     private ResultSet res;
 
     private String _gender[] = {"Male", "Female"};
+    private int _class[] = {1,2,3,4,5,6,7,8,9,10};
+    private String section[] = {"A", "B"};
 
 
 
@@ -162,101 +181,105 @@ public class Admin_Dashboard implements Initializable {
             new_student_pane.setVisible(false);
             General_info_pane.setVisible(false);
             announce_pane.setVisible(false);
-            result_update_pane.setVisible(false);
-            result_update_pane1.setVisible(false);
-            result_update_pane2.setVisible(false);
             contact_info_pane.setVisible(false);
+            student_info_pane.setVisible(false);
+            student_info_selection.setVisible(false);
+            class_routine_pane.setVisible(false);
+            label_only_pane.setVisible(false);
         }
         else if(event.getSource() == new_student_data){
             new_student_pane.setVisible(true);
             General_info_pane.setVisible(true);
             home_pane.setVisible(false);
             announce_pane.setVisible(false);
-            result_update_pane.setVisible(false);
-            result_update_pane1.setVisible(false);
-            result_update_pane2.setVisible(false);
             contact_info_pane.setVisible(false);
+            student_info_pane.setVisible(false);
+            student_info_selection.setVisible(false);
+            class_routine_pane.setVisible(false);
+            label_only_pane.setVisible(false);
         }
         else if(event.getSource() == Post_announce){
             announce_pane.setVisible(true);
             new_student_pane.setVisible(false);
             General_info_pane.setVisible(false);
             home_pane.setVisible(false);
-            result_update_pane.setVisible(false);
-            result_update_pane1.setVisible(false);
-            result_update_pane2.setVisible(false);
             contact_info_pane.setVisible(false);
+            student_info_pane.setVisible(false);
+            student_info_selection.setVisible(false);
+            class_routine_pane.setVisible(false);
+            label_only_pane.setVisible(false);
         }
-        else if(event.getSource() == result_update){
-            result_update_pane.setVisible(true);
-            result_update_pane1.setVisible(true);
-            result_update_pane2.setVisible(false);
-            announce_pane.setVisible(false);
-            new_student_pane.setVisible(false);
-            General_info_pane.setVisible(false);
-            home_pane.setVisible(false);
-            contact_info_pane.setVisible(false);
-        }
-        else if(event.getSource() == Next_page_result){
-            result_update_pane.setVisible(true);
-            result_update_pane1.setVisible(false);
-            result_update_pane2.setVisible(true);
-            announce_pane.setVisible(false);
-            new_student_pane.setVisible(false);
-            General_info_pane.setVisible(false);
-            home_pane.setVisible(false);
-            contact_info_pane.setVisible(false);
-        }
+
         else if(event.getSource() == back_to_new_info || event.getSource() == General_info_insert){
             new_student_pane.setVisible(true);
             contact_info_pane.setVisible(false);
-            result_update_pane.setVisible(false);
-            result_update_pane1.setVisible(false);
-            result_update_pane2.setVisible(false);
             announce_pane.setVisible(false);
             General_info_pane.setVisible(true);
             home_pane.setVisible(false);
+            student_info_pane.setVisible(false);
+            student_info_selection.setVisible(false);
+            class_routine_pane.setVisible(false);
+            label_only_pane.setVisible(false);
         }
         else if(event.getSource() == jump_to_contact || event.getSource() == Contact_info_insert){
             contact_info_pane.setVisible(true);
             new_student_pane.setVisible(false);
-            result_update_pane.setVisible(false);
-            result_update_pane1.setVisible(false);
-            result_update_pane2.setVisible(false);
             announce_pane.setVisible(false);
             General_info_pane.setVisible(true);
             home_pane.setVisible(false);
+            student_info_pane.setVisible(false);
+            student_info_selection.setVisible(false);
+            class_routine_pane.setVisible(false);
+            label_only_pane.setVisible(false);
         }
         else if(event.getSource() == save_new_data){
             new_student_pane.setVisible(true);
             contact_info_pane.setVisible(false);
-            result_update_pane.setVisible(false);
-            result_update_pane1.setVisible(false);
-            result_update_pane2.setVisible(false);
             announce_pane.setVisible(false);
             General_info_pane.setVisible(true);
             home_pane.setVisible(false);
+            student_info_pane.setVisible(false);
+            student_info_selection.setVisible(false);
+            class_routine_pane.setVisible(false);
+            label_only_pane.setVisible(false);
         }
-        else if(event.getSource() == result_update){
-            result_update_pane.setVisible(true);
-            result_update_pane1.setVisible(true);
-            result_update_pane2.setVisible(false);
+
+        else if(event.getSource() == Classrooms){
+            class_routine_pane.setVisible(true);
             new_student_pane.setVisible(false);
+            student_info_pane.setVisible(false);
             contact_info_pane.setVisible(false);
             announce_pane.setVisible(false);
             General_info_pane.setVisible(false);
             home_pane.setVisible(false);
+            student_info_selection.setVisible(false);
+            label_only_pane.setVisible(false);
         }
-        else if(event.getSource() == Next_page_result){
-            result_update_pane.setVisible(true);
-            result_update_pane1.setVisible(false);
-            result_update_pane2.setVisible(true);
+        else if(event.getSource() == student_info_proceed_btn1){
             new_student_pane.setVisible(false);
+            student_info_selection.setVisible(false);
+            student_info_pane.setVisible(true);
             contact_info_pane.setVisible(false);
             announce_pane.setVisible(false);
             General_info_pane.setVisible(false);
             home_pane.setVisible(false);
+            class_routine_pane.setVisible(false);
+            label_only_pane.setVisible(false);
         }
+        else if(event.getSource() == All_Student_info){
+            student_info_selection.setVisible(true);
+            label_only_pane.setVisible(true);
+            new_student_pane.setVisible(false);
+            student_info_pane.setVisible(false);
+            contact_info_pane.setVisible(false);
+            announce_pane.setVisible(false);
+            General_info_pane.setVisible(false);
+            home_pane.setVisible(false);
+            class_routine_pane.setVisible(false);
+        }
+
+
+
 
     }
 

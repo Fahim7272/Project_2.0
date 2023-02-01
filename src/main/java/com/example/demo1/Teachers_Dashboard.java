@@ -3,6 +3,7 @@ package com.example.demo1;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.layout.AnchorPane;
 
 public class Teachers_Dashboard {
 
@@ -28,6 +29,9 @@ public class Teachers_Dashboard {
     private ChoiceBox<?> announcement_section;
 
     @FXML
+    private Button home;
+
+    @FXML
     private Button log_out_teachers;
 
     @FXML
@@ -37,7 +41,7 @@ public class Teachers_Dashboard {
     private Button result_update;
 
     @FXML
-    private Button teachers_home;
+    private AnchorPane teachers_home;
 
     @FXML
     private Button teachers_routine;

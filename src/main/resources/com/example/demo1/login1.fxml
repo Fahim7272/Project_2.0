@@ -14,7 +14,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
    <children>
-      <BorderPane fx:id="login_student" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0" visible="false">
+      <BorderPane fx:id="login_student" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0">
          <left>
             <AnchorPane prefHeight="506.0" prefWidth="370.0" style="-fx-background-color: #7ed6df;" BorderPane.alignment="CENTER">
                <children>
@@ -151,7 +151,7 @@
             </AnchorPane>
          </right>
       </BorderPane>
-      <BorderPane fx:id="login_admin1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0">
+      <BorderPane fx:id="login_admin1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="765.0" visible="false">
          <center>
             <AnchorPane prefHeight="506.0" prefWidth="364.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
                <children>
