@@ -115,7 +115,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
         </Button>
-      <AnchorPane fx:id="home_pane" layoutX="202.0" layoutY="204.0" visible="false">
+      <AnchorPane fx:id="home_pane" layoutX="202.0" layoutY="204.0">
          <children>
             <Pane prefHeight="438.0" prefWidth="744.0" style="-fx-background-color: #ffffff;">
                <children>
@@ -141,7 +141,7 @@
             </Pane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="new_student_pane" layoutX="204.0" layoutY="204.0" prefHeight="445.0" prefWidth="750.0">
+      <AnchorPane fx:id="new_student_pane" layoutX="204.0" layoutY="204.0" prefHeight="445.0" prefWidth="750.0" visible="false">
          <children>
             <Label layoutX="25.0" layoutY="109.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Student ID:" textAlignment="CENTER">
                <font>

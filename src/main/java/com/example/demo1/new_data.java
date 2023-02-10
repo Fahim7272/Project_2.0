@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 public class new_data {
 
-    private  Integer id;
+    private  String id;
     private String classs;
     private String section;
     private String first_name;
@@ -27,7 +27,7 @@ public class new_data {
     public new_data() {
     }
 
-    public new_data(Integer id, String first_name, String last_name, String fathers_name, String mothers_name, String birth_date, String gender, String birth_reg, String religion, String image, String blood_grp, int fathers_mobile, int mothers_mobile, String email, String present_address, String permanent_address) {
+    public new_data(String id, String first_name, String last_name, String fathers_name, String mothers_name, String birth_date, String gender, String birth_reg, String religion, String image, String blood_grp, int fathers_mobile, int mothers_mobile, String email, String present_address, String permanent_address) {
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
@@ -47,11 +47,11 @@ public class new_data {
     }
 
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

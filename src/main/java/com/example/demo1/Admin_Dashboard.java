@@ -300,7 +300,7 @@ public class Admin_Dashboard implements Initializable {
 
             while(res.next()) {
                 data = new new_data(
-                        res.getInt("ID"),
+                        res.getString("ID"),
                         res.getString("first_name"),
                         res.getString("last_name"),
                         res.getString("fathers_name"),
@@ -396,11 +396,11 @@ public class Admin_Dashboard implements Initializable {
 
                 prep.setString(1, first_name.getText());
                 prep.setString(2, last_name.getText());
-                prep.setString(3, std_ID_input.getAccessibleText());
+                prep.setString(3, std_ID_input.getText());
                 prep.setString(4, fathers_name.getText());
                 prep.setString(5, mothers_name.getText());
-                prep.setString(6, birth_date_inn.getAccessibleText());
-                prep.setString(7, gender_in.getAccessibleText());
+                prep.setString(6, birth_date_inn.getValue().toString());
+                prep.setString(7, gender_in.getValue().toString());
                 prep.setString(8, religion_in.getText());
                 prep.setString(9, blood_grp_in.getText());
 
