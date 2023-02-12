@@ -10,7 +10,7 @@ public class DB {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection connect = DriverManager.getConnection("jdbc:mysql://localhost/project_2.0", "root", "Br6jlJFJ7XUgAUrC");
+            Connection connect = DriverManager.getConnection("jdbc:mysql://localhost/2.0", "root", "Br6jlJFJ7XUgAUrC");
 
             return connect;
 

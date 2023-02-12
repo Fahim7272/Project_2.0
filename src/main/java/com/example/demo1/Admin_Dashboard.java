@@ -140,9 +140,6 @@ public class Admin_Dashboard implements Initializable {
     private Button save_gen;
 
     @FXML
-    private Button save_new_data;
-
-    @FXML
     private TextField section_in;
 
     @FXML
@@ -162,6 +159,7 @@ public class Admin_Dashboard implements Initializable {
 
     @FXML
     private AnchorPane student_info_selection;
+
 
 
 
@@ -228,7 +226,7 @@ public class Admin_Dashboard implements Initializable {
             student_info_selection.setVisible(false);
             class_routine_pane.setVisible(false);
         }
-        else if(event.getSource() == save_new_data){
+        else if(event.getSource() == save_gen){
             new_student_pane.setVisible(true);
             contact_info_pane.setVisible(false);
             announce_pane.setVisible(false);
@@ -428,7 +426,7 @@ public class Admin_Dashboard implements Initializable {
                 fathers_name.setText(result.getString("fathers_name"));
                 mothers_name.setText(result.getString("mothers_name"));
                 //date_of_birth.setText(result.getString("date_of_birth"));
-                //gender_in.setText(result.getString("gender"));
+               // gender_in.setText(result.getString("gender"));
                 religion_in.setText(result.getString("religion"));
                 blood_grp_in.setText(result.getString("blood_group"));
             }
