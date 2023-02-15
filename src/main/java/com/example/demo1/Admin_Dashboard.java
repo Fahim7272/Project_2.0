@@ -204,6 +204,21 @@ public class Admin_Dashboard implements Initializable {
 
     }
 
+    public int teachers  = 0;
+
+    public void count_teachers() throws SQLException {
+        connect = DB.connectDb();
+        String sql = "SELECT * FROM `student_data`";
+        statement = connect.createStatement();
+        res = statement.executeQuery(sql);
+
+        while(res.next()) {
+            ++teachers;
+        }total_teacher.setText(String.valueOf(teachers));
+
+    }
+
+
 
     public void changeScene(ActionEvent event){
         if(event.getSource() == home){

@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -105,11 +106,13 @@ public class HelloController {
         void exit1(ActionEvent event) {
                 System.exit(0);
         }
-
+        public double x = 0;
+        public double y = 0;
         public void login(){
 
                 connect = DB.connectDb();
                 String sql ="SELECT * FROM `account` WHERE userID = ? and password = ?";
+
 
                 try{
                         pre = connect.prepareStatement(sql);
@@ -124,6 +127,17 @@ public class HelloController {
                                 Parent root = FXMLLoader.load(getClass().getResource("Student_DashBoard.fxml"));
                                 Scene scene = new Scene(root);
                                 Stage stage = new Stage();
+
+                                root.setOnMousePressed((MouseEvent event)->{
+                                        x = event.getSceneX();
+                                        y = event.getSceneY();
+                                });
+
+                                root.setOnMouseDragged((MouseEvent event) ->{
+                                        stage.setX(event.getScreenX() - x);
+                                        stage.setY(event.getScreenY() - y);
+                                });
+
                                 stage.initStyle(StageStyle.DECORATED.UNDECORATED);
                                 stage.setScene(scene);
                                 stage.show();
@@ -163,6 +177,15 @@ public class HelloController {
 
                                 Scene scene = new Scene(root);
                                 Stage stage = new Stage();
+                                root.setOnMousePressed((MouseEvent event)->{
+                                        x = event.getSceneX();
+                                        y = event.getSceneY();
+                                });
+
+                                root.setOnMouseDragged((MouseEvent event) ->{
+                                        stage.setX(event.getScreenX() - x);
+                                        stage.setY(event.getScreenY() - y);
+                                });
                                 stage.initStyle(StageStyle.DECORATED.UNDECORATED);
                                 stage.setScene(scene);
                                 stage.show();
@@ -200,6 +223,15 @@ public class HelloController {
                                 Parent root = FXMLLoader.load(getClass().getResource("Teachers_DashBoard.fxml"));
                                 Scene scene = new Scene(root);
                                 Stage stage = new Stage();
+                                root.setOnMousePressed((MouseEvent event)->{
+                                        x = event.getSceneX();
+                                        y = event.getSceneY();
+                                });
+
+                                root.setOnMouseDragged((MouseEvent event) ->{
+                                        stage.setX(event.getScreenX() - x);
+                                        stage.setY(event.getScreenY() - y);
+                                });
                                 stage.initStyle(StageStyle.DECORATED.UNDECORATED);
                                 stage.setScene(scene);
                                 stage.show();

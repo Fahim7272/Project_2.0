@@ -61,15 +61,15 @@ public class Student_DashBoard implements Initializable {
 
 
     @FXML
-    void exit(MouseEvent event) {
+    void exit(ActionEvent event) {
         System.exit(0);
     }
 
-    public void exit(javafx.scene.input.MouseEvent mouseEvent) {
-    }
+    /*public void exit(javafx.scene.input.MouseEvent mouseEvent) {
+    }*/
     public void student() throws SQLException {
         Connection connect = DB.connectDb();
-        String sql = "SELECT * FROM `student_data` where id = ";
+        String sql = "SELECT * FROM `student_data` where id = 53";
         Statement statement = connect.createStatement();
         ResultSet res = statement.executeQuery(sql);
 
@@ -79,11 +79,10 @@ public class Student_DashBoard implements Initializable {
             father.setText(res.getString("fathers_name"));
             mother.setText(res.getString("mothers_name"));
             birth_date.setText(res.getString("birth_date"));
-
             religion.setText(res.getString("religion"));
             stu_image.setImage(new Image(res.getBinaryStream("image")));
             blood.setText(res.getString("blood_grp"));
-            address.setText(res.getString("present_address"));
+            //address.setText(res.getString("present_address"));
 
             //store data
             sid = res.getInt("id");

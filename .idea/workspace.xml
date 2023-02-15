@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="462f9eb6-cb33-48b7-9317-b4f8f9d845eb" name="Changes" comment="Progression">
+    <list default="true" id="462f9eb6-cb33-48b7-9317-b4f8f9d845eb" name="Changes" comment="Major Progression">
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -17,13 +17,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/Admin_Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/Admin_Dashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/MainApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/Student_DashBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/Student_DashBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/Teachers_Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/Teachers_Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Admin_Dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Admin_Dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Student_DashBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Student_DashBoard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Teachers_DashBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Teachers_DashBoard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo1/login1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/login1.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +151,7 @@
       <workItem from="1676471572078" duration="471000" />
       <workItem from="1676472153661" duration="1438000" />
       <workItem from="1676478701973" duration="609000" />
-      <workItem from="1676480950521" duration="174000" />
+      <workItem from="1676480950521" duration="1778000" />
     </task>
     <task id="LOCAL-00001" summary="Student Login">
       <created>1673171997461</created>
@@ -488,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676473218089</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Major Progression">
+      <created>1676481203321</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1676481203321</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,6 +523,7 @@
     <MESSAGE value="Teachers Login" />
     <MESSAGE value="Database Update" />
     <MESSAGE value="Progression" />
-    <option name="LAST_COMMIT_MESSAGE" value="Progression" />
+    <MESSAGE value="Major Progression" />
+    <option name="LAST_COMMIT_MESSAGE" value="Major Progression" />
   </component>
 </project>
