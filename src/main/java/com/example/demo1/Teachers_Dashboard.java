@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
 
+import java.awt.event.ActionEvent;
+
 public class Teachers_Dashboard {
 
     @FXML
@@ -29,6 +31,9 @@ public class Teachers_Dashboard {
     private ChoiceBox<?> announcement_section;
 
     @FXML
+    private Button exit_Teacher;
+
+    @FXML
     private Button home;
 
     @FXML
@@ -45,5 +50,12 @@ public class Teachers_Dashboard {
 
     @FXML
     private Button teachers_routine;
+
+    @FXML
+    void exit(ActionEvent event) {
+        System.exit(0);
+    }
+
+
 
 }

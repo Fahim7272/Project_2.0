@@ -16,7 +16,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="950.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.Student_DashBoard">
     <children>
-        <Button layoutX="916.0" layoutY="4.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="34.0" style="-fx-background-color: #ffffff;" text="Button" textFill="WHITE">
+        <Button layoutX="916.0" layoutY="4.0" mnemonicParsing="false" onAction="#exit" prefHeight="28.0" prefWidth="34.0" style="-fx-background-color: #ffffff;" text="Button" textFill="WHITE">
             <graphic>
                 <ImageView fitHeight="37.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -40,33 +40,28 @@
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button fx:id="Help_chat" layoutX="34.0" layoutY="501.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Help Chat">
+                <Button fx:id="Help_chat" layoutX="34.0" layoutY="451.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Help Chat">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button layoutX="34.0" layoutY="456.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Attendence">
+                <Button layoutX="34.0" layoutY="406.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Attendence">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button fx:id="result_update" layoutX="34.0" layoutY="409.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Update Result">
+                <Button fx:id="result_update" layoutX="34.0" layoutY="359.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Update Result">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button fx:id="post_announce" layoutX="35.0" layoutY="362.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Post Announcement">
-                    <font>
-                        <Font size="12.5" />
-                    </font>
-                </Button>
-                <Button fx:id="teachers_routine" layoutX="32.0" layoutY="315.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="138.0" style="-fx-background-color: #ffffff;" text="Routine">
+                <Button fx:id="post_announce" layoutX="35.0" layoutY="312.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Post Announcement">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
                 <Circle fill="#798a96" layoutX="100.0" layoutY="95.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
-            <Button fx:id="log_out_teachers" layoutX="34.0" layoutY="545.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Log Out">
+            <Button fx:id="log_out_teachers" layoutX="34.0" layoutY="495.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Log Out">
                <font>
                   <Font size="12.5" />
                </font>
@@ -91,18 +86,17 @@
          <content>
             <AnchorPane prefHeight="1000.0" prefWidth="750.0">
                <children>
-                  <TableView prefHeight="1032.0" prefWidth="752.0">
-                    <columns>
-                      <TableColumn prefWidth="109.6000183224678" text="C1" />
-                      <TableColumn prefWidth="93.5999755859375" text="C2" />
-                        <TableColumn prefWidth="62.40003967285156" text="Column X" />
-                        <TableColumn prefWidth="80.79998779296875" text="Column X" />
-                        <TableColumn text="Column X" />
-                        <TableColumn prefWidth="78.39996337890625" text="Column X" />
-                        <TableColumn prefWidth="83.20001220703125" text="Column X" />
-                        <TableColumn prefWidth="60.0" text="Column X" />
-                        <TableColumn prefWidth="68.7999267578125" text="Column X" />
-                    </columns>
+                  <TableView prefHeight="1033.0" prefWidth="642.0">
+                     <columns>
+                        <TableColumn prefWidth="84.0000427365303" text="C1" />
+                        <TableColumn prefWidth="74.39996337890625" text="C2" />
+                        <TableColumn prefWidth="94.4000244140625" text="Column X" />
+                        <TableColumn prefWidth="80.80000305175781" text="Column X" />
+                        <TableColumn prefWidth="77.60003662109375" text="Column X" />
+                        <TableColumn prefWidth="75.20001220703125" text="Column X" />
+                        <TableColumn prefWidth="76.0" text="Column X" />
+                        <TableColumn prefWidth="72.0" text="Column X" />
+                     </columns>
                   </TableView>
                </children>
             </AnchorPane>
@@ -130,17 +124,17 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="201.0" layoutY="191.0" prefHeight="462.0" prefWidth="752.0">
+      <AnchorPane layoutX="201.0" layoutY="191.0" prefHeight="462.0" prefWidth="752.0" visible="false">
          <children>
             <Label layoutX="290.0" layoutY="56.0" text="Update Result">
                <font>
                   <Font name="System Bold Italic" size="26.0" />
                </font>
             </Label>
-            <ChoiceBox fx:id="Upd_res_class" layoutX="301.0" layoutY="144.0" prefWidth="150.0" />
-            <ChoiceBox fx:id="Upd_res_section" layoutX="301.0" layoutY="205.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="Upd_res_class" layoutX="299.0" layoutY="144.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="Upd_res_section" layoutX="299.0" layoutY="205.0" prefWidth="150.0" />
             <Button fx:id="Upd_res_proceed" layoutX="650.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #7ed6df;" text="Proceed" />
-            <Label layoutX="233.0" layoutY="147.0" text="Class: ">
+            <Label layoutX="231.0" layoutY="147.0" text="Class: ">
                <font>
                   <Font size="15.0" />
                </font>
@@ -152,5 +146,67 @@
             </Label>
          </children>
       </AnchorPane>
+      <ScrollPane layoutX="202.0" layoutY="191.0" prefHeight="462.0" prefWidth="752.0" visible="false">
+         <content>
+            <AnchorPane prefHeight="1000.0" prefWidth="750.0">
+               <children>
+                  <TableView prefHeight="1033.0" prefWidth="642.0">
+                     <columns>
+                        <TableColumn prefWidth="84.0000427365303" text="C1" />
+                        <TableColumn prefWidth="74.39996337890625" text="C2" />
+                        <TableColumn prefWidth="94.4000244140625" text="Column X" />
+                        <TableColumn prefWidth="80.80000305175781" text="Column X" />
+                        <TableColumn prefWidth="77.60003662109375" text="Column X" />
+                        <TableColumn prefWidth="75.20001220703125" text="Column X" />
+                        <TableColumn prefWidth="76.0" text="Column X" />
+                        <TableColumn prefWidth="72.0" text="Column X" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <AnchorPane fx:id="attendance_pane" layoutX="199.0" layoutY="191.0" prefHeight="462.0" prefWidth="752.0" visible="false">
+         <children>
+            <Label layoutX="306.0" layoutY="56.0" text="Attendance">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="attendance_class" layoutX="301.0" layoutY="144.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="attendance_section" layoutX="301.0" layoutY="205.0" prefWidth="150.0" />
+            <Button fx:id="attendance_proceed" layoutX="650.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #7ed6df;" text="Proceed" />
+            <Label layoutX="233.0" layoutY="147.0" text="Class: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="221.0" layoutY="207.0" text="Section: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="204.0" layoutY="191.0" prefHeight="462.0" prefWidth="752.0" visible="false">
+         <content>
+            <AnchorPane prefHeight="1000.0" prefWidth="750.0">
+               <children>
+                  <TableView prefHeight="1033.0" prefWidth="642.0">
+                     <columns>
+                        <TableColumn prefWidth="84.0000427365303" text="C1" />
+                        <TableColumn prefWidth="80.79998779296875" text="C2" />
+                        <TableColumn prefWidth="87.20001220703125" text="Column X" />
+                        <TableColumn prefWidth="80.80000305175781" text="Column X" />
+                        <TableColumn prefWidth="77.60003662109375" text="Column X" />
+                        <TableColumn prefWidth="75.20001220703125" text="Column X" />
+                        <TableColumn prefWidth="76.0" text="Column X" />
+                        <TableColumn prefWidth="72.0" text="Column X" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
     </children>
 </AnchorPane>
