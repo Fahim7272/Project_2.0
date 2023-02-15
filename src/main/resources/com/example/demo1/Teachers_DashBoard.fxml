@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="950.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.Student_DashBoard">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="950.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.Teachers_Dashboard">
     <children>
         <Button fx:id="exit_Teacher" layoutX="916.0" layoutY="4.0" mnemonicParsing="false" onAction="#exit" prefHeight="28.0" prefWidth="34.0" style="-fx-background-color: #ffffff;" text="Button" textFill="WHITE">
             <graphic>
@@ -31,28 +33,28 @@
                         <Font size="25.0" />
                     </font>
                 </Text>
-                <Button fx:id="Help_chat" layoutX="34.0" layoutY="380.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Help Chat">
+                <Button fx:id="Help_chat" layoutX="34.0" layoutY="415.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Help Chat">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button layoutX="34.0" layoutY="335.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Attendence">
+                <Button layoutX="34.0" layoutY="370.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Attendence">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button fx:id="result_update" layoutX="34.0" layoutY="288.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Update Result">
+                <Button fx:id="result_update" layoutX="34.0" layoutY="323.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Update Result">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
-                <Button fx:id="post_announce" layoutX="35.0" layoutY="241.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Post Announcement">
+                <Button fx:id="post_announce" layoutX="35.0" layoutY="276.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Post Announcement">
                     <font>
                         <Font size="12.5" />
                     </font>
                 </Button>
                 <Circle fill="#798a96" layoutX="100.0" layoutY="95.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
-                <Button fx:id="log_out_teachers" layoutX="34.0" layoutY="424.0" mnemonicParsing="false" onAction="#log_out" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Log Out">
+                <Button fx:id="log_out_teachers" layoutX="34.0" layoutY="459.0" mnemonicParsing="false" onAction="#logOut" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Log Out">
                     <font>
                         <Font size="12.5" />
                     </font>
@@ -94,7 +96,7 @@
                 </AnchorPane>
             </content>
         </ScrollPane>
-        <AnchorPane layoutX="198.0" layoutY="191.0" prefHeight="462.0" prefWidth="752.0">
+        <AnchorPane layoutX="198.0" layoutY="191.0" prefHeight="462.0" prefWidth="752.0" visible="false">
             <children>
                 <Label layoutX="259.0" layoutY="56.0" text="Post Announcement">
                     <font>
@@ -138,5 +140,27 @@
                 </Label>
             </children>
         </AnchorPane>
+      <AnchorPane fx:id="class_routine_pane" layoutX="201.0" layoutY="191.0" prefHeight="446.0" prefWidth="746.0">
+         <children>
+            <Label layoutX="294.0" layoutY="14.0" text="Mark Update">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id1" layoutX="32.0" layoutY="221.0" />
+            <TextField fx:id="test" layoutX="202.0" layoutY="221.0" />
+            <TextField fx:id="mid" layoutX="371.0" layoutY="221.0" />
+            <TextField fx:id="final_mark1" layoutX="544.0" layoutY="221.0" />
+            <Button fx:id="class_routine_proceed_btn" layoutX="650.0" layoutY="402.0" mnemonicParsing="false" onAction="#mark_Update" style="-fx-background-color: #7ed6df;" text="Proceed">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text layoutX="32.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter ID" wrappingWidth="53.600000000000136" />
+            <Text layoutX="202.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Class Test Mark" wrappingWidth="119.99996337890639" />
+            <Text layoutX="371.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Mid Term Mark" wrappingWidth="149.60000000000014" />
+            <Text layoutX="553.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Final Mark" wrappingWidth="149.60000000000014" />
+         </children>
+      </AnchorPane>
     </children>
 </AnchorPane>

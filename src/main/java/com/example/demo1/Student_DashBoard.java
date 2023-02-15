@@ -2,6 +2,7 @@ package com.example.demo1;
 
 
 import java.awt.event.MouseEvent;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -16,7 +17,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -25,6 +30,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import com.example.demo1.HelloController.*;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 
 public class Student_DashBoard implements Initializable {
@@ -45,9 +52,7 @@ public class Student_DashBoard implements Initializable {
     public AnchorPane payments;
     public AnchorPane help;
     public static String[] subject = {"Bangla","English","Math","ICT"};
-    public static String[] subject_for_result = {"Bangla","English","Math","ICT"};
     public ChoiceBox<String> subjects;
-    public ChoiceBox<String> sub_for_res;
 
 
     public ImageView stu_image;
@@ -55,8 +60,11 @@ public class Student_DashBoard implements Initializable {
     public Label test_mark;
     public Label mid_mark;
     public Label final_mark;
+    public ChoiceBox<String> subject1;
+    public Button log_out_st;
+
     ObservableList<String> items = FXCollections.observableArrayList();
-    ObservableList<String> items2 = FXCollections.observableArrayList();
+
     private int sid;
     public String class_;
     public String section_;
@@ -144,11 +152,14 @@ public class Student_DashBoard implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         subjects.setItems(FXCollections.observableArrayList(subject));
+        subject1.setItems(FXCollections.observableArrayList(subject));
 
         try {
             results();
         } catch (SQLException e) {
+            System.out.println(e);
             throw new RuntimeException(e);
+
         }
         try {
             student();
@@ -160,19 +171,37 @@ public class Student_DashBoard implements Initializable {
     public void check_notice(ActionEvent actionEvent) throws SQLException {
         notices.setItems(null);
         Connection connect = DB.connectDb();
+
         String sql = "SELECT * FROM `notice` where  class = '"+class_+"'and section = '"+section_+"'and subject = '"+subjects.getValue()+"'";
         Statement statement = connect.createStatement();
         ResultSet res = statement.executeQuery(sql);
         notices.setItems(items);
 
         while (res.next()){
-            String s = res.getString("notice");
+            String s = res.getString("notice")+res.getString("notice");
             items.add(s);
         }
     }
+
+    public void logOut(javafx.event.ActionEvent event) throws IOException {
+        if(event.getSource() == log_out_st){
+            log_out_st.getScene().getWindow().hide();
+            Parent root = FXMLLoader.load((getClass().getResource("login1.fxml")));
+
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.DECORATED.UNDECORATED);
+            stage.setScene(scene);
+            stage.show();
+        }
+    }
+
+
+
     public void results() throws SQLException {
         Connection connect = DB.connectDb();
-        String sql = "SELECT * FROM `result` WHERE id = "+sid;
+
+        String sql = "SELECT * FROM `result` WHERE id = '"+sid+"'and subjects_ = '"+subject1.getValue()+"'";
         Statement statement = connect.createStatement();
         ResultSet res = statement.executeQuery(sql);
         while (res.next()){
@@ -181,4 +210,6 @@ public class Student_DashBoard implements Initializable {
             final_mark.setText(res.getString("final"));
         }
     }
+
+
 }

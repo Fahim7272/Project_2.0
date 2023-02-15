@@ -439,12 +439,13 @@ public class Admin_Dashboard implements Initializable {
     }
     public void mark_Update(ActionEvent actionEvent) throws SQLException {
         connect = DB.connectDb();
-        String sql = "UPDATE `result` SET `id`=?,`test`=?,`mid`=?,`final`=? WHERE id = "+id.getText();
+        String sql = "UPDATE `result` SET `id`='[value-1]',`test`='[value-2]',`mid`='[value-3]',`final`='[value-4]',`subjects_`='[value-5]' WHERE "+id.getText();
         PreparedStatement st = (PreparedStatement) connect.prepareStatement(sql);
         st.setInt(1, Integer.parseInt(id.getText()));
         st.setString(2,test.getText());
         st.setString(3,mid.getText());
         st.setString(4,final_mark.getText());
+        st.setString(5,final_mark.getText());
         st.executeUpdate();
     }
 

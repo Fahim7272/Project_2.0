@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="462f9eb6-cb33-48b7-9317-b4f8f9d845eb" name="Changes" comment="Progression">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqlDataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/exitadmin.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/Admin_Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/Admin_Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/Student_DashBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/Student_DashBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo1/Teachers_Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo1/Teachers_Dashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Student_DashBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo1/Student_DashBoard.fxml" afterDir="false" />
@@ -64,7 +54,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "C:/",
+    "last_opened_file_path": "C:/Users/User/OneDrive/Desktop/Project 2.5",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -155,14 +145,7 @@
       <workItem from="1676472153661" duration="1438000" />
       <workItem from="1676478701973" duration="609000" />
       <workItem from="1676480950521" duration="3452000" />
-      <workItem from="1676484467867" duration="1431000" />
-    </task>
-    <task id="LOCAL-00001" summary="Student Login">
-      <created>1673171997461</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1673171997461</updated>
+      <workItem from="1676484467867" duration="7344000" />
     </task>
     <task id="LOCAL-00002" summary="Student Login">
       <created>1673172577566</created>
@@ -500,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676482781318</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Progression">
+      <created>1676485916520</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1676485916521</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
