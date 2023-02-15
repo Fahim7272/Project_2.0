@@ -93,10 +93,6 @@ public class HelloController {
 
 
 
-
-
-
-
         @FXML
         void exit(ActionEvent event) {
                 System.exit(0);

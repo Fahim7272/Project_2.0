@@ -45,13 +45,18 @@ public class Student_DashBoard implements Initializable {
     public AnchorPane payments;
     public AnchorPane help;
     public static String[] subject = {"Bangla","English","Math","ICT"};
+    public static String[] subject_for_result = {"Bangla","English","Math","ICT"};
     public ChoiceBox<String> subjects;
+    public ChoiceBox<String> sub_for_res;
+
+
     public ImageView stu_image;
     public ListView<String> notices;
     public Label test_mark;
     public Label mid_mark;
     public Label final_mark;
     ObservableList<String> items = FXCollections.observableArrayList();
+    ObservableList<String> items2 = FXCollections.observableArrayList();
     private int sid;
     public String class_;
     public String section_;
@@ -128,6 +133,7 @@ public class Student_DashBoard implements Initializable {
     }
 
     public void result(ActionEvent actionEvent) {
+
         home.setVisible(false);
         payments.setVisible(false);
         medical.setVisible(false);
@@ -138,6 +144,7 @@ public class Student_DashBoard implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         subjects.setItems(FXCollections.observableArrayList(subject));
+
         try {
             results();
         } catch (SQLException e) {

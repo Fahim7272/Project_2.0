@@ -52,7 +52,7 @@
                     </font>
                 </Button>
                 <Circle fill="#798a96" layoutX="100.0" layoutY="95.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" />
-                <Button fx:id="log_out_teachers" layoutX="34.0" layoutY="424.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Log Out">
+                <Button fx:id="log_out_teachers" layoutX="34.0" layoutY="424.0" mnemonicParsing="false" onAction="#log_out" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #ffffff;" text="Log Out">
                     <font>
                         <Font size="12.5" />
                     </font>

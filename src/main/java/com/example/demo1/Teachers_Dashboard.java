@@ -1,11 +1,17 @@
 package com.example.demo1;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.awt.event.ActionEvent;
+import java.io.IOException;
 
 public class Teachers_Dashboard {
 
@@ -48,6 +54,19 @@ public class Teachers_Dashboard {
     @FXML
     void exit(ActionEvent event) {
         System.exit(0);
+    }
+
+    public void logOut(javafx.event.ActionEvent event) throws IOException {
+        if(event.getSource() == log_out_teachers){
+            log_out_teachers.getScene().getWindow().hide();
+            Parent root = FXMLLoader.load((getClass().getResource("login1.fxml")));
+
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.DECORATED.UNDECORATED);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
 }

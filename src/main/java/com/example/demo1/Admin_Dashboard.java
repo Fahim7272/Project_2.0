@@ -330,51 +330,6 @@ public class Admin_Dashboard implements Initializable {
         }
     }
 
-
-    public ObservableList<new_data> list_Data(){
-        ObservableList<new_data> data_List = FXCollections.observableArrayList();
-        connect = DB.connectDb();
-
-        String sql = "SELECT * FROM `student_data`";
-
-        try{
-            statement = connect.createStatement();
-            res = statement.executeQuery(sql);
-
-            new_data data;
-
-            while(res.next()) {
-                data = new new_data(
-                        res.getString("ID"),
-                        res.getString("first_name"),
-                        res.getString("last_name"),
-                        res.getString("fathers_name"),
-                        res.getString("mothers_name"),
-                        res.getString("birth_date"),
-                        res.getString("gender"),
-                        res.getString("birth_reg"),
-                        res.getString("religion"),
-                        res.getString("image"),
-                        res.getString("blood_grp"),
-                        res.getInt("fathers_mobile"),
-                        res.getInt("mothers_mobile"),
-                        res.getString("email"),
-                        res.getString("present_address"),
-                        res.getString("permanent_address")
-                );
-
-                data_List.addAll(data);
-            }
-
-        }
-        catch(Exception ex){
-
-        }
-        return data_List;
-    }
-
-
-
     public void insertImage() throws FileNotFoundException {
         FileChooser op = new FileChooser();
         File file = op.showOpenDialog(image.getScene().getWindow());
@@ -491,8 +446,6 @@ public class Admin_Dashboard implements Initializable {
         st.setString(3,mid.getText());
         st.setString(4,final_mark.getText());
         st.executeUpdate();
-
-
     }
 
 
