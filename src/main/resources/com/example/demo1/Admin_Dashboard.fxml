@@ -142,164 +142,125 @@
                 </Pane>
             </children>
         </AnchorPane>
-        <AnchorPane fx:id="new_student_pane" layoutX="204.0" layoutY="204.0" prefHeight="445.0" prefWidth="750.0" visible="false">
+        <AnchorPane fx:id="new_student_pane" layoutX="204.0" layoutY="205.0" prefHeight="446.0" prefWidth="750.0">
             <children>
-                <Label layoutX="25.0" layoutY="109.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Student ID:" textAlignment="CENTER">
+                <Label layoutX="25.0" layoutY="159.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Student ID:" textAlignment="CENTER">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <Label layoutX="25.0" layoutY="246.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Mother's Name:" textAlignment="CENTER">
+                <Label layoutX="25.0" layoutY="296.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Mother's Name:" textAlignment="CENTER">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <Label layoutX="25.0" layoutY="212.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Father's Name:" textAlignment="CENTER">
+                <Label layoutX="25.0" layoutY="262.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Father's Name:" textAlignment="CENTER">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <Label layoutX="25.0" layoutY="73.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Last Name:" textAlignment="CENTER">
+                <Label layoutX="25.0" layoutY="123.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Last Name:" textAlignment="CENTER">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <Label layoutX="25.0" layoutY="39.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="First Name: " textAlignment="CENTER">
+                <Label layoutX="25.0" layoutY="89.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="First Name: " textAlignment="CENTER">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <Label layoutX="25.0" layoutY="280.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Birth Date:" textAlignment="CENTER">
+                <Label layoutX="25.0" layoutY="330.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Birth Date:" textAlignment="CENTER">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <Label layoutX="451.0" layoutY="207.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Gender: " textAlignment="CENTER">
+                <Label layoutX="451.0" layoutY="257.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Gender: " textAlignment="CENTER">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <Label layoutX="451.0" layoutY="242.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Religion:" textAlignment="CENTER">
+                <Label layoutX="451.0" layoutY="292.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Religion:" textAlignment="CENTER">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <Label layoutX="450.0" layoutY="278.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Blood Group:" textAlignment="CENTER">
+                <Label layoutX="450.0" layoutY="328.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Blood Group:" textAlignment="CENTER">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="std_ID_input" layoutX="158.0" layoutY="110.0" prefHeight="26.0" prefWidth="243.0">
+                <TextField fx:id="std_ID_input" layoutX="158.0" layoutY="160.0" prefHeight="26.0" prefWidth="243.0">
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField fx:id="first_name" layoutX="158.0" layoutY="39.0" prefHeight="26.0" prefWidth="243.0">
+                <TextField fx:id="first_name" layoutX="158.0" layoutY="89.0" prefHeight="26.0" prefWidth="243.0">
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField fx:id="last_name" layoutX="158.0" layoutY="73.0" prefHeight="26.0" prefWidth="243.0">
+                <TextField fx:id="last_name" layoutX="158.0" layoutY="123.0" prefHeight="26.0" prefWidth="243.0">
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField fx:id="fathers_name" layoutX="158.0" layoutY="212.0" prefHeight="26.0" prefWidth="243.0">
+                <TextField fx:id="fathers_name" layoutX="158.0" layoutY="262.0" prefHeight="26.0" prefWidth="243.0">
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField fx:id="mothers_name" layoutX="158.0" layoutY="246.0" prefHeight="26.0" prefWidth="243.0">
+                <TextField fx:id="mothers_name" layoutX="158.0" layoutY="296.0" prefHeight="26.0" prefWidth="243.0">
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField fx:id="religion_in" layoutX="546.0" layoutY="243.0" prefHeight="26.0" prefWidth="150.0">
+                <TextField fx:id="religion_in" layoutX="546.0" layoutY="293.0" prefHeight="26.0" prefWidth="150.0">
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField fx:id="blood_grp_in" layoutX="546.0" layoutY="278.0" prefHeight="26.0" prefWidth="150.0">
+                <TextField fx:id="blood_grp_in" layoutX="546.0" layoutY="328.0" prefHeight="26.0" prefWidth="150.0">
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <Button fx:id="jump_to_contact" layoutX="664.0" layoutY="401.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="28.0" prefWidth="48.0" style="-fx-background-color: #7ed6df;" text="Next" />
-                <Label layoutX="25.0" layoutY="143.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Class: " textAlignment="CENTER">
+                <Label layoutX="25.0" layoutY="193.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Class: " textAlignment="CENTER">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <Label layoutX="25.0" layoutY="177.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Section: " textAlignment="CENTER">
+                <Label layoutX="25.0" layoutY="227.0" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: white;" text="Section: " textAlignment="CENTER">
                     <font>
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="class_in" layoutX="158.0" layoutY="143.0" prefHeight="26.0" prefWidth="243.0">
+                <TextField fx:id="class_in" layoutX="158.0" layoutY="193.0" prefHeight="26.0" prefWidth="243.0">
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField fx:id="section_in" layoutX="158.0" layoutY="177.0" prefHeight="26.0" prefWidth="243.0">
+                <TextField fx:id="section_in" layoutX="158.0" layoutY="227.0" prefHeight="26.0" prefWidth="243.0">
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <ComboBox fx:id="gender_in" layoutX="546.0" layoutY="208.0" onAction="#comboBx" prefWidth="150.0" />
-                <DatePicker fx:id="birth_date_inn" layoutX="159.0" layoutY="280.0" prefHeight="26.0" prefWidth="243.0" />
-                <Button fx:id="save_gen" layoutX="14.0" layoutY="401.0" mnemonicParsing="false" onAction="#insert_data" prefHeight="26.0" prefWidth="49.0" style="-fx-background-color: #7ed6df;" text="Save" />
-                <Label layoutX="451.0" layoutY="43.0" text="Image:" />
-                <ImageView fx:id="stu_image" fitHeight="110.0" fitWidth="150.0" layoutX="546.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" />
-                <Button fx:id="image" layoutX="662.0" layoutY="164.0" mnemonicParsing="false" onAction="#insertImage" style="-fx-background-color: #7ed6df;" text="upload" />
+                <ComboBox fx:id="gender_in" layoutX="546.0" layoutY="258.0" onAction="#comboBx" prefWidth="150.0" />
+                <DatePicker fx:id="birth_date_inn" layoutX="159.0" layoutY="330.0" prefHeight="26.0" prefWidth="243.0" />
+                <Button fx:id="save_gen" layoutX="664.0" layoutY="395.0" mnemonicParsing="false" onAction="#insert_data" prefHeight="26.0" prefWidth="49.0" style="-fx-background-color: #7ed6df;" text="Save" />
+                <Label layoutX="451.0" layoutY="93.0" text="Image:">
+                    <font>
+                        <Font size="14.0" />
+                    </font></Label>
+                <ImageView fx:id="stu_image" fitHeight="134.0" fitWidth="150.0" layoutX="546.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" />
+                <Button fx:id="image" layoutX="662.0" layoutY="214.0" mnemonicParsing="false" onAction="#insertImage" style="-fx-background-color: #7ed6df;" text="upload" />
+                <Label layoutX="283.0" layoutY="16.0" text="New Student Data">
+                    <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                    </font>
+                </Label>
             </children>
         </AnchorPane>
-        <AnchorPane fx:id="contact_info_pane" layoutX="202.0" layoutY="204.0" prefHeight="450.0" prefWidth="744.0" visible="false">
-            <children>
-                <Label layoutX="28.0" layoutY="22.0" text="Gaurdian's Contact Information">
-                    <font>
-                        <Font name="System Bold Italic" size="16.0" />
-                    </font>
-                </Label>
-                <Label layoutX="28.0" layoutY="62.0" text="Father's Mobile No : ">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                <Label layoutX="28.0" layoutY="94.0" text="Mother's Mobile No : ">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                <Label layoutX="28.0" layoutY="126.0" prefHeight="20.0" prefWidth="48.0" text="Email: ">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                <Label layoutX="28.0" layoutY="182.0" text="Address">
-                    <font>
-                        <Font name="System Bold Italic" size="16.0" />
-                    </font>
-                </Label>
-                <Label layoutX="28.0" layoutY="220.0" text="Present Address: ">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                <Label layoutX="384.0" layoutY="220.0" text="Permanent Address: ">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                <TextField layoutX="28.0" layoutY="248.0" prefHeight="91.0" prefWidth="336.0" />
-                <TextField layoutX="384.0" layoutY="248.0" prefHeight="91.0" prefWidth="336.0" />
-                <TextField layoutX="171.0" layoutY="60.0" prefHeight="26.0" prefWidth="316.0" />
-                <TextField layoutX="171.0" layoutY="92.0" prefHeight="26.0" prefWidth="316.0" />
-                <TextField layoutX="171.0" layoutY="124.0" prefHeight="26.0" prefWidth="316.0" />
-                <Button fx:id="back_to_new_info" layoutX="28.0" layoutY="371.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: #7ed6df;" text="Back" />
-                <Button fx:id="save_new_data" layoutX="660.0" layoutY="371.0" mnemonicParsing="false" onAction="#changeScene" prefHeight="26.0" prefWidth="59.0" style="-fx-background-color: #7ed6df;" text="Save" />
-            </children>
-        </AnchorPane>
-        <AnchorPane fx:id="announce_pane" layoutX="204.0" layoutY="204.0" prefHeight="446.0" prefWidth="744.0">
+        <AnchorPane fx:id="announce_pane" layoutX="204.0" layoutY="204.0" prefHeight="446.0" prefWidth="744.0" visible="false">
             <children>
                 <Button fx:id="post_announce_btn" layoutX="604.0" layoutY="310.0" mnemonicParsing="false" onAction="#post_notice" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #7ed6df;" text="Post" />
                 <Text layoutX="303.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Post Notice">

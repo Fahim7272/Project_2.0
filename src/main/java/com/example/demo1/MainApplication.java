@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.scene.input.MouseEvent;
 
+
 //import java.awt.event.MouseEvent;
 import java.io.IOException;
 
@@ -16,6 +17,7 @@ public class MainApplication extends Application {
 
     private double x = 0;
     private double y = 0;
+    public static String std_pp;
 
     @Override
     public void start(Stage stage) throws IOException {

@@ -34,9 +34,6 @@ public class Teachers_Dashboard {
     private Button exit_Teacher;
 
     @FXML
-    private Button home;
-
-    @FXML
     private Button log_out_teachers;
 
     @FXML
@@ -49,13 +46,8 @@ public class Teachers_Dashboard {
     private AnchorPane teachers_home;
 
     @FXML
-    private Button teachers_routine;
-
-    @FXML
     void exit(ActionEvent event) {
         System.exit(0);
     }
-
-
 
 }

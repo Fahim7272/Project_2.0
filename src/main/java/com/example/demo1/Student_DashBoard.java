@@ -67,11 +67,9 @@ public class Student_DashBoard implements Initializable {
 
     public void exit(javafx.scene.input.MouseEvent mouseEvent) {
     }
-
-
     public void student() throws SQLException {
         Connection connect = DB.connectDb();
-        String sql = "SELECT * FROM `student_data` where id = 53";
+        String sql = "SELECT * FROM `student_data` where id = ";
         Statement statement = connect.createStatement();
         ResultSet res = statement.executeQuery(sql);
 

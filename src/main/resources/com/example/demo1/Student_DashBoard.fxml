@@ -50,7 +50,7 @@
                   <Font size="12.5" />
                </font>
             </Button>
-            <ImageView fx:id="stu_image" fitHeight="135.0" fitWidth="138.0" layoutX="30.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="stu_image" fitHeight="135.0" fitWidth="153.0" layoutX="30.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
       <Button layoutX="901.0" layoutY="4.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="34.0" style="-fx-background-color: #ffffff;" text="Button" textFill="WHITE">
@@ -76,7 +76,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="home" layoutX="209.0" layoutY="198.0" prefHeight="447.0" prefWidth="733.0">
+      <AnchorPane fx:id="home" layoutX="209.0" layoutY="198.0" prefHeight="447.0" prefWidth="733.0" visible="false">
          <children>
             <Text layoutX="15.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Academic Information">
                <font>
@@ -192,7 +192,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="result" layoutX="209.0" layoutY="198.0" prefHeight="447.0" prefWidth="733.0" visible="false">
+      <AnchorPane fx:id="result" layoutX="209.0" layoutY="198.0" prefHeight="447.0" prefWidth="733.0">
          <children>
             <Text layoutX="68.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Average Mark">
                <font>

@@ -16,6 +16,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import com.example.demo1.Student_DashBoard.*;
+
 import java.util.ResourceBundle;
 
 public class HelloController {
@@ -89,6 +91,11 @@ public class HelloController {
         private ResultSet resultSet;
 
 
+
+
+
+
+
         @FXML
         void exit(ActionEvent event) {
                 System.exit(0);
@@ -108,14 +115,13 @@ public class HelloController {
                         pre = connect.prepareStatement(sql);
                         pre.setString(1, ID.getText());
                         pre.setString(2, password.getText());
-
                         resultSet = pre.executeQuery();
 
                         if(resultSet.next()){
 
                                 login_button.getScene().getWindow().hide();
-                                Parent root = FXMLLoader.load(getClass().getResource("Student_DashBoard.fxml"));
 
+                                Parent root = FXMLLoader.load(getClass().getResource("Student_DashBoard.fxml"));
                                 Scene scene = new Scene(root);
                                 Stage stage = new Stage();
                                 stage.initStyle(StageStyle.DECORATED.UNDECORATED);
@@ -155,6 +161,43 @@ public class HelloController {
                                 login_button1.getScene().getWindow().hide();
                                 Parent root = FXMLLoader.load(getClass().getResource("Admin_DashBoard.fxml"));
 
+                                Scene scene = new Scene(root);
+                                Stage stage = new Stage();
+                                stage.initStyle(StageStyle.DECORATED.UNDECORATED);
+                                stage.setScene(scene);
+                                stage.show();
+
+                        }
+                        else{
+                                Alert alert = new Alert(Alert.AlertType.ERROR);
+                                alert.setTitle("Error");
+                                alert.setHeaderText(null);
+                                alert.setContentText("Wrong Username or Password");
+                                alert.showAndWait();
+                        }
+
+                }catch(Exception ex){
+                        System.out.println(ex);
+                }
+        }
+
+
+        public void Teachers_login_(){
+
+                connect = DB.connectDb();
+                String sql ="SELECT * FROM `teachers login` WHERE teachers_ID = ? and teachers_pass = ?";
+
+                try{
+                        pre = connect.prepareStatement(sql);
+                        pre.setString(1, ID11.getText());
+                        pre.setString(2, password11.getText());
+                        resultSet = pre.executeQuery();
+
+                        if(resultSet.next()){
+
+                                login_button11.getScene().getWindow().hide();
+
+                                Parent root = FXMLLoader.load(getClass().getResource("Teachers_DashBoard.fxml"));
                                 Scene scene = new Scene(root);
                                 Stage stage = new Stage();
                                 stage.initStyle(StageStyle.DECORATED.UNDECORATED);

@@ -15,28 +15,42 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import java.awt.*;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import static com.example.demo1.Student_DashBoard.subject;
+
 
 public class Admin_Dashboard implements Initializable {
 
+    public Button image;
+    public ImageView stu_image;
+    public Label total_staff;
+    public Label total_teacher;
+    public Label total_student;
+    public TextField id;
+    public TextField test;
+    public TextField mid;
+    public TextField final_mark;
+    public ChoiceBox<String> class_;
+    public ChoiceBox<String> section_;
+    public ChoiceBox subject_;
     @FXML
     private Button All_Student_info;
 
@@ -140,6 +154,9 @@ public class Admin_Dashboard implements Initializable {
     private Button save_gen;
 
     @FXML
+    private Button save_new_data;
+
+    @FXML
     private TextField section_in;
 
     @FXML
@@ -159,7 +176,7 @@ public class Admin_Dashboard implements Initializable {
 
     @FXML
     private AnchorPane student_info_selection;
-
+    public FileInputStream fileInputStream;
 
 
 
@@ -172,6 +189,21 @@ public class Admin_Dashboard implements Initializable {
     private Statement statement;
     private PreparedStatement prep;
     private ResultSet res;
+    public int student = 0;
+
+
+    public void count() throws SQLException {
+        connect = DB.connectDb();
+        String sql = "SELECT * FROM `student_data`";
+        statement = connect.createStatement();
+        res = statement.executeQuery(sql);
+
+        while(res.next()) {
+            ++student;
+        }total_student.setText(String.valueOf(student));
+
+    }
+
 
     public void changeScene(ActionEvent event){
         if(event.getSource() == home){
@@ -226,7 +258,7 @@ public class Admin_Dashboard implements Initializable {
             student_info_selection.setVisible(false);
             class_routine_pane.setVisible(false);
         }
-        else if(event.getSource() == save_gen){
+        else if(event.getSource() == save_new_data){
             new_student_pane.setVisible(true);
             contact_info_pane.setVisible(false);
             announce_pane.setVisible(false);
@@ -286,9 +318,9 @@ public class Admin_Dashboard implements Initializable {
 
     public ObservableList<new_data> list_Data(){
         ObservableList<new_data> data_List = FXCollections.observableArrayList();
-         connect = DB.connectDb();
+        connect = DB.connectDb();
 
-        String sql = "SELECT * FROM `new_student_data`";
+        String sql = "SELECT * FROM `student_data`";
 
         try{
             statement = connect.createStatement();
@@ -328,18 +360,11 @@ public class Admin_Dashboard implements Initializable {
 
 
 
-    public void insertImage() {
-
+    public void insertImage() throws FileNotFoundException {
         FileChooser op = new FileChooser();
-        Stage stage = (Stage)left.getScene().getWindow();
-        File file = op.showOpenDialog(stage);
-
-        if(file != null){
-
-            Image image;
-            insertImage();
-        }
-
+        File file = op.showOpenDialog(image.getScene().getWindow());
+        fileInputStream = new FileInputStream(file);
+        stu_image.setImage(new Image(fileInputStream));
     }
 
 
@@ -350,15 +375,15 @@ public class Admin_Dashboard implements Initializable {
 
         for(String d: _gender){
             list.add(d);
-       }
+        }
 
         ObservableList datalist = FXCollections.observableArrayList(list);
         gender_in.setItems(datalist);
     }
 
 
-    private String _class[] = {"1","2","3","4","5","6","7","8","9","10"};
-    private String section[] = {"A","B"};
+    public static String _class[] = {"1","2","3","4","5","6","7","8","9","10"};
+    public static String section[] = {"A","B"};
     public void comboBx2(){
         List<String> list = new ArrayList<>();
 
@@ -368,7 +393,7 @@ public class Admin_Dashboard implements Initializable {
 
         ObservableList datalist = FXCollections.observableArrayList(list);
         student_info_class_selector.setItems(datalist);
-        routine_class_picker.setItems(datalist);
+        //routine_class_picker.setItems(datalist);
     }
 
     public void comboBx3(){
@@ -380,40 +405,48 @@ public class Admin_Dashboard implements Initializable {
 
         ObservableList datalist = FXCollections.observableArrayList(list);
         student_info_section_selector.setItems(datalist);
-        routine_section_picker.setItems(datalist);
+        //routine_section_picker.setItems(datalist);
     }
 
-    public void insert_data()
-    {
-        connect = DB.connectDb();
+    public void insert_data(ActionEvent event) throws SQLException, IOException {
 
-        String sql = "INSERT INTO `new_student_data`(`First_name`, `Last_name`, `ID`, `Fathers_name`, `Mothers name`, `Birth_date`, `Gender`, `Religion`, `Blood Group`) VALUES (?,?,?,?,?,?,?,?,?)";
+        if(event.getSource() == save_gen) {
+            connect = DB.connectDb();
+            String sql = "INSERT INTO `student_data`(`id`, `first_name`, `last_name`, `fathers_name`, `mothers_name`, `birth_date`, `gender`, `birth_reg`, `religion`, `image`, `blood_grp`, `fathers_mobile`, `mothers_mobile`, `email`, `present_address`, `permanent_address`, `class`, `section`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            String sql1 = "INSERT INTO `result`(`id`) VALUES (?)";
+            prep = (PreparedStatement) connect.prepareStatement(sql);
+            PreparedStatement res = (PreparedStatement) connect.prepareStatement(sql1);
+            System.out.println(birth_date_inn.getAccessibleText());
+            prep.setInt(1, Integer.parseInt(std_ID_input.getText()));
+            prep.setString(2, first_name.getText());
+            prep.setString(3, last_name.getText());
+            prep.setString(4, fathers_name.getText());
+            prep.setString(5, mothers_name.getText());
+            prep.setString(6, birth_date_inn.getValue().toString());
+            prep.setString(7, gender_in.getValue().toString());
+            prep.setString(8,birth_date_inn.getValue().toString());
+            prep.setString(9, religion_in.getText());
+            prep.setBinaryStream(10,fileInputStream,fileInputStream.available());
+            prep.setString(11, blood_grp_in.getText());
+            prep.setString(12,"0000000");
+            prep.setString(13,"1111111");
+            prep.setString(14,"demo@demo.com");
+            prep.setString(15,"present Address");
+            prep.setString(16,"permanent address");
+            prep.setString(17,class_in.getText());
+            prep.setString(18,section_in.getText());
+            res.setInt(1, Integer.parseInt(std_ID_input.getText()));
+            prep.executeUpdate();
+            res.executeUpdate();
 
-            try{
-                prep = (PreparedStatement) connect.prepareStatement(sql);
-
-                prep.setString(1, first_name.getText());
-                prep.setString(2, last_name.getText());
-                prep.setString(3, std_ID_input.getText());
-                prep.setString(4, fathers_name.getText());
-                prep.setString(5, mothers_name.getText());
-                prep.setString(6, birth_date_inn.getValue().toString());
-                prep.setString(7, gender_in.getValue().toString());
-                prep.setString(8, religion_in.getText());
-                prep.setString(9, blood_grp_in.getText());
-
-                prep.executeUpdate();
-
-            }catch (Exception ex){
-
-            }
+        }
 
     }
 
 
     public void showData() {
         connect = DB.connectDb();
-        String sql = "SELECT * FROM new_student_data";
+        String sql = "SELECT * FROM student_data";
 
         try {
             prep = (PreparedStatement) connect.prepareStatement(sql);
@@ -426,7 +459,7 @@ public class Admin_Dashboard implements Initializable {
                 fathers_name.setText(result.getString("fathers_name"));
                 mothers_name.setText(result.getString("mothers_name"));
                 //date_of_birth.setText(result.getString("date_of_birth"));
-               // gender_in.setText(result.getString("gender"));
+                //gender_in.setText(result.getString("gender"));
                 religion_in.setText(result.getString("religion"));
                 blood_grp_in.setText(result.getString("blood_group"));
             }
@@ -434,14 +467,49 @@ public class Admin_Dashboard implements Initializable {
             e.printStackTrace();
         }
     }
+    public void mark_Update(ActionEvent actionEvent) throws SQLException {
+        connect = DB.connectDb();
+        String sql = "UPDATE `result` SET `id`=?,`test`=?,`mid`=?,`final`=? WHERE id = "+id.getText();
+        PreparedStatement st = (PreparedStatement) connect.prepareStatement(sql);
+        st.setInt(1, Integer.parseInt(id.getText()));
+        st.setString(2,test.getText());
+        st.setString(3,mid.getText());
+        st.setString(4,final_mark.getText());
+        st.executeUpdate();
+
+
+    }
+
 
 
 
     @Override
     public void initialize(URL url, ResourceBundle rs){
+
+        section_.setItems(FXCollections.observableArrayList(section));
+        class_.setItems(FXCollections.observableArrayList(_class));
+        subject_.setItems(FXCollections.observableArrayList(subject));
+
+
+        try {
+            count();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         comboBx();
-        comboBx2();
-        comboBx3();
+        //comboBx2();
+        //comboBx3();
     }
 
+
+    public void post_notice(ActionEvent actionEvent) throws SQLException {
+        connect = DB.connectDb();
+        String sql = "INSERT INTO `notice`(`class`, `section`, `notice`, `subject`) VALUES (?,?,?,?)";
+        PreparedStatement st = (PreparedStatement) connect.prepareStatement(sql);
+        st.setString(1,class_.getValue().toString());
+        st.setString(2,section_.getValue().toString());
+        st.setString(3,post_writer.getText());
+        st.setString(4,subject_.getValue().toString());
+        st.executeUpdate();
+    }
 }

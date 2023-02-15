@@ -48,9 +48,9 @@
                   </Button>
                   <TextField fx:id="ID" layoutX="131.0" layoutY="215.0" prefHeight="26.0" prefWidth="170.0" promptText="ID" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
                   <PasswordField fx:id="password" layoutX="130.0" layoutY="272.0" prefHeight="26.0" prefWidth="170.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
-      
+
                   <Button fx:id="login_button" layoutX="186.0" layoutY="333.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #7ed6df;" text="Login" textFill="#000000b0" />
-      
+
                   <Text fill="#7ed6df" layoutX="142.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT LOGIN">
                      <font>
                         <Font size="18.0" />
@@ -166,7 +166,7 @@
                   </Button>
                   <TextField fx:id="ID11" layoutX="118.0" layoutY="209.0" prefHeight="26.0" prefWidth="170.0" promptText="ID" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
                   <PasswordField fx:id="password11" layoutX="117.0" layoutY="266.0" prefHeight="26.0" prefWidth="170.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #7ed6df; -fx-border-width: 0px 0px 2px 0px;" />
-                  <Button fx:id="login_button11" layoutX="173.0" layoutY="325.0" mnemonicParsing="false" onAction="#login_admin" style="-fx-background-color: #7ed6df;" text="Login" textFill="#000000b0" />
+                  <Button fx:id="login_button11" layoutX="173.0" layoutY="325.0" mnemonicParsing="false" onAction="#Teachers_login_" style="-fx-background-color: #7ed6df;" text="Login" textFill="#000000b0" />
                   <Text fill="#7ed6df" layoutX="128.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEACHERS LOGIN">
                      <font>
                         <Font size="18.0" />
